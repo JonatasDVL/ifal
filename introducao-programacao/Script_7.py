@@ -1,0 +1,6 @@
+nota1=float(input(" Qual foi a sua nota do primeiro bimestre? "))
+nota2=float(input(" Qual foi a sua nota do segundo bimestre? "))
+media=((nota1 + nota2)/2)
+if(media>10):print(" ERRO!!! ")
+if(media<=10):print(" Sua media foi",media,"do primeiro semestre. ")
+if(10>=media>=6):print(" Parabéns você passou! ")
