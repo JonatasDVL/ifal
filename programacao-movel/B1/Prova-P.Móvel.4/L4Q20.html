@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 20
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- As Organizações Tabajara resolveram dar um abonos aos seus colaboradores em reconhecimento ao bom resultado alcançado durante o ano que passou. Para isto contratou você para desenvolver a aplicação que servirá como uma projeção de quanto será gasto com o pagamento deste abonos.
+         
+        Após reuniões envolvendo a diretoria executiva, a diretoria financeira e os representantes do sindicato
+        laboral, chegou-se a seguinte forma de cálculo:
+            
+            Cada funcionário receberá o equivalente a 20% do seu salário bruto de dezembro; 
+            O piso do abonos será de 100 reais, isto é, aqueles funcionários cujo salário for muito baixo, recebem este valor mínimo; 
+
+            Neste momento, não se deve ter nenhuma preocupação com colaboradores com tempo menor de casa, descontos, impostos ou outras particularidades. Seu programa deverá permitir a digitação do salário de um número indefinido (desconhecido) de salários. Um valor de salário igual a 0 (zero) encerra a digitação. Após a entrada de todos os dados o programa deverá calcular o valor do abonos concedido a cada colaborador, de acordo com a regra definida acima. Ao final, o programa deverá apresentar:
+            
+            O salário de cada funcionário, juntamente com o valor do abonos;
+            O número total de funcionário processados;
+            O valor total a ser gasto com o pagamento do abonos;
+            O número de funcionário que receberá o valor mínimo de 100 reais;
+            O maior valor pago como abonos; A tela abaixo é um exemplo de execução do programa, apenas para fins ilustrativos. Os valores podem mudar a cada execução do programa.
+            Projeção de Gastos com abonos
+            ============================ 
+            
+            Salário: 1000
+            Salário: 300
+            Salário: 500
+            Salário: 100
+            Salário: 4500
+            Salário: 0
+            
+            Salário    - abonos     
+            R$ 1000.00 - R$  200.00
+            R$  300.00 - R$  100.00
+            R$  500.00 - R$  100.00
+            R$  100.00 - R$  100.00
+            R$ 4500.00 - R$  900.00
+            
+            Foram processados 5 colaboradores
+            Total gasto com abonoss: R$ 1400.00
+            Valor mínimo pago a 3 colaboradores
+            Maior valor de abonos pago: R$ 900.00 -->
+
+</head>
+
+<body>
+
+    <h1>20° Questão</h1>
+
+    <script>
+        var computados = 0;
+        var salarios = [];
+        var abonos = [];
+        while (salario != 0) {
+            var salario = Number(window.prompt(`Digite seu salário:`));
+            while (isNaN(salario) || salario < 0) {
+                window.alert(`Você digitou um valor inválido. Digite novamente!`);
+                var salario = Number(window.prompt(`Digite seu salário:`));
+            }
+            if (salario != 0) {
+                computados++;
+                salarios.push(salario);
+            }
+        }
+
+        document.writeln(`Salário &emsp; - &emsp; Abono <br>`);
+        var totalAbono = 0;
+        var menorAbonos = 0;
+        for (var i = 0; i < computados; i++) {
+            abonos[i] = salarios[i] / 100 * 20;
+            if (abonos[i] < 100) {
+                abonos[i] = 100;
+                menorAbonos++;
+            }
+            totalAbono += abonos[i];
+            document.writeln(`R$ ${salarios[i]} &emsp; - &emsp; R$ ${abonos[i]} <br>`);
+
+
+        }
+
+        var maiorAbonos = abonos.reduce(function (a, b) {
+            return Math.max(a, b);
+        }, -Infinity);
+
+        document.write(`<br> Foram processados ${computados} colaboradores; <br>
+            Total gasto com abonos: R$ ${totalAbono}<br>
+            Valor mínimo pago a ${menorAbonos} colaboradores; <br>
+            Maior valor de abono pago: R$ ${maiorAbonos}`);
+
+    </script>
+    
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

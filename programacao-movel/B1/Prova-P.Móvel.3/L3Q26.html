@@ -1,0 +1,84 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>26° Questão</title>
+            <link rel="stylesheet" href="ResL3.css">
+            
+            <!-- Lista 3 Questão 26
+            Dupla:  Ezequiel Santana e Jônatas Duarte 
+            Prof: Italo Rodrigo da Silva Arruda
+            Disciplina: Programação Móvel 
+            Turma: 513
+            -->
+    
+            <!-- Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato. -->
+    
+    
+            <script>    
+                var eleitores = Number(window.prompt(`Digite o número de eleitores:`));
+                var comprovacao = eleitores % 2;
+
+                    while(isNaN(eleitores) || eleitores < 0 || comprovacao != 1 && comprovacao != 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var eleitores = Number(window.prompt(`Digite o número de eleitores:`));
+                        var comprovacao = eleitores % 2;
+                    }
+                
+                var candidato1 = 0;
+                var candidato2 = 0;
+                var candidato3 = 0;
+                var nulo = 0;
+                
+                while(eleitores != 0){
+                var votos = Number(window.prompt(`Digite o número do candidato:
+                    \nVote 0 para seu voto ser nulo;\nVote 1 para Irineu(você não sabe nem eu); \nVote 2 para Tirica(Sou eu Tirica); \nVote 3 para Enéas(Meu nome é Enéas.)`));  
+                    while(votos != 1 && votos != 2 && votos != 3 && votos != 0){
+                        window.alert(`Você digitou um número inválido!`);
+                        var votos = Number(window.prompt(`Digite o número do candidato:
+                        \nVote 0 para seu voto ser nulo;\nVote 1 para Irineu(você não sabe nem eu); \nVote 2 para Tirica(Sou eu Tirica); \nVote 3 para Enéas(Meu nome é Enéas.)`)); 
+                    }
+                    
+                    if(votos == 1){
+                        candidato1++;
+                    }else if(votos == 2){
+                        candidato2++;
+                    }else if(votos == 3){
+                        candidato3++;
+                    }else{
+                        nulo++;
+                    }
+                    eleitores--; 
+                }
+    
+            </script>
+    
+        </head>
+       
+        <body>
+                    
+            <h1>26° Questão</h1>
+    
+            <script> 
+    
+                document.write(`O canditado Irineu, você não sabe nem, recebeu ${candidato1} votos;`);
+                document.write(`O canditado Tirica, sou eu Tirica, recebeu ${candidato2} votos;`);
+                document.write(`O canditado Enéas, meu nome é Enéas, recebeu ${candidato3} votos;`);
+                document.write(`Votos nulos:${nulo}.`);
+              
+            </script>
+    
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>  
+    
+    
+            <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+    
+            <a href="ResL3.html">
+                <input type="button" class="button" value="Voltar">
+                </a>
+    
+        </body>
+            
+    </html>

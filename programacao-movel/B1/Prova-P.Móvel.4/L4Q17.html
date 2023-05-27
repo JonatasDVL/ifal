@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 17
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Em uma competição de salto em distância cada atleta tem direito a cinco saltos. O resultado do atleta será determinado pela média dos cinco valores restantes. Você deve fazer um programa que receba o nome e as cinco distâncias alcançadas pelo atleta em seus saltos e depois informe o nome, os saltos e a média dos saltos. O programa deve ser encerrado quando não for informado o nome do atleta. A saída do programa deve ser conforme o exemplo abaixo:
+            Atleta: Rodrigo Curvêllo
+            
+            Primeiro Salto: 6.5 m
+            Segundo Salto: 6.1 m
+            Terceiro Salto: 6.2 m
+            Quarto Salto: 5.4 m
+            Quinto Salto: 5.3 m
+
+            Resultado final:
+            Atleta: Rodrigo Curvêllo
+            Saltos: 6.5 - 6.1 - 6.2 - 5.4 - 5.3
+            Média dos saltos: 5.9 m-->
+
+
+    <script>
+        var j = 1;
+        var nome = String(window.prompt(`Digite o nome do ${j}° atleta:`));
+        while (nome != "") {
+            var saltos = []
+            for (var i = 1; i < 6; i++) {
+                var salto = Number(window.prompt(`Digite o valor do ${i}° salto em metros:`));
+                while (isNaN(salto) || salto < 0) {
+                    window.alert(`Você digitou um valor inválido!`);
+                    salto = Number(window.prompt(`Digite o valor do ${i}° salto em metros:`));
+                }
+                saltos.push(salto);
+            }
+
+            var media = (saltos[0] + saltos[1] + saltos[2] + saltos[3] + saltos[4]) / 5;
+
+            window.alert(`Atleta: ${nome};\nPrimeiro Salto: ${saltos[0]} m;\nSegundo Salto: ${saltos[1]} m;\nTerceiro Salto: ${saltos[2]} m;\nQuarto Salto: ${saltos[3]} m;\nQuinto Salto: ${saltos[4]} m;
+            \nResultado final:\nAtleta: ${nome};\nSaltos: ${saltos[0]} - ${saltos[1]} - ${saltos[2]} - ${saltos[3]} - ${saltos[4]};\nMédia dos saltos: ${media} m.`);
+            j++;
+            nome = String(window.prompt(`Digite o nome do ${j}° atleta:`));
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>17° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

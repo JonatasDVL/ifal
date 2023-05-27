@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 2
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.-->
+
+
+        <script>
+            var nome = String(window.prompt(`Digite o seu nome de usúario: `));  
+
+            while(nome == "" || nome == null){
+                    window.alert(`O nome de usúario digitado está inválido!`);
+                    var nome = String(window.prompt(`Digite o seu nome de usúario: `));
+                }
+            
+            var senha = String(window.prompt(`Digite sua senha: `));  
+
+            while(senha == nome || senha == "" || senha == null){
+                    window.alert(`O valor da senha digitada está inválida!`);
+                    var senha = String(window.prompt(`Digite uma senha: `));
+                }
+            
+            window.alert(`Os valores digitados estão válidos`);
+
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>2° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

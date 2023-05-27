@@ -1,0 +1,39 @@
+/*
+IFAL - Disciplina: Programação Web
+Professor: Italo Arruda
+Turma: 513
+Integrantes: Jônatas Duarte e Ezequiel Santana
+*/
+
+body{
+    text-align: center;
+}
+.centro{
+    text-align: center;
+}
+
+#centro{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+#negrito{
+    font-weight: bold;
+}
+#rosa{
+    color: rgb(255, 13, 203);
+}
+table{
+    border-radius: 8px;
+    border-color: rgb(143, 142, 142);
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+}
+
+td{
+    border-radius: 8px;
+    border-color:rgb(143, 142, 142);
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+}

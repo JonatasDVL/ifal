@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>19° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 19
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.-->
+
+
+        <script>
+            var numero1 = Number(window.prompt(`Digite um número:`));  
+
+            while(isNaN(numero1) || numero1 > 1000 || numero1 < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var numero1 = Number(window.prompt(`Digite um número:`));  
+            }
+
+            var numero2 = Number(window.prompt(`Digite mais um número:`));
+            
+            while(isNaN(numero2) || numero2 > 1000 || numero2 < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var numero2 = Number(window.prompt(`Digite o segundo número:`));  
+            }  
+            
+            var numero3 = Number(window.prompt(`Digite mais um número:`));  
+            
+            while(isNaN(numero3) || numero3 > 1000 || numero3 < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var numero3 = Number(window.prompt(`Digite o terceiro número:`));  
+            }
+
+            var numero4 = Number(window.prompt(`Digite mais um número:`));  
+            
+            while(isNaN(numero4) || numero4 > 1000 || numero4 < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var numero4 = Number(window.prompt(`Digite o quarto número:`));  
+            }
+
+            var numero5 = Number(window.prompt(`Digite mais um número:`));  
+
+            while(isNaN(numero5) || numero5 > 1000 || numero5 < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var numero5 = Number(window.prompt(`Digite o quinto número:`));  
+            }
+
+            var numeroMaior = Math.max(numero1,numero2,numero3,numero4,numero5);
+            var numeroMenor = Math.min(numero1,numero2,numero3,numero4,numero5);
+            var soma = numeroMenor + numeroMaior;
+
+            if(numeroMaior != numeroMenor){
+                window.alert(`Dos números digitados:\nO maior número foi ${numeroMaior}, o menor número foi ${numeroMenor} e a soma deles é igual a ${soma}.`);
+            }else{
+                window.alert(`Dos números digitados:\nO maior e menor número foi ${numeroMaior} e a soma deles é igual a ${soma}.`);
+            }
+
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>19° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

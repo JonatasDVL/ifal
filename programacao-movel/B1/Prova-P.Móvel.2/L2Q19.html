@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>19° Questão</title>
+        
+        <!-- Lista 2 Questão 19
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+            <!-- Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+                Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:
+                    326 = 3 centenas, 2 dezenas e 6 unidades
+                    12 = 1 dezena e 2 unidades 
+                    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16 -->
+
+        <script>
+            var numero = String(window.prompt(`Digite um número inteiro menor que 1.000: `)); 
+            var comprovacao = numero / 1; 
+
+            // "loop" para comprovar se o numero é um número e se ele é menor que 1.000
+            while(comprovacao != numero || numero >= 1000 || numero == "" || numero.length >= 4){
+                window.alert(`Você digitou um valor inválido!`);
+                var numero = String(window.prompt(`Digite um número inteiro menor que 1.000: `)); 
+                var comprovacao = numero / 1;  
+            }
+            
+            // selecionando cada caractere do numero
+            if(numero.length == 3){
+                var unidades = parseInt(numero.substring(2, 3));
+                var dezenas = parseInt(numero.substring(1, 2));
+                var centenas = parseInt(numero.substring(0, 1));
+            }else if(numero.length == 2){
+                var unidades = parseInt(numero.substring(1, 2));
+                var dezenas = parseInt(numero.substring(0, 1));
+            }else if(numero.length == 1){
+                var unidades = parseInt(numero.substring(0, 1));
+            }
+            
+            var numero = parseInt(numero);
+
+            // caso uma dessas variaveis não tiver valor, então ele receberá o valor 0
+            if(isNaN(unidades)){ 
+            var unidades = 0;
+            }
+            if(isNaN(dezenas)){
+                var dezenas = 0
+            }            
+            if(isNaN(centenas)){
+                var centenas = 0;            
+            }
+
+            // dizendo a quantidade de centenas, dezenas e unidades 
+            if(centenas == 0 && dezenas == 0 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${unidades} unidade.`);
+            }else if(centenas == 0 && dezenas == 0 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${unidades} unidades.`);
+            }else if(centenas == 0 && dezenas == 1 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${dezenas} dezena.`);            
+            }else if(centenas == 0 && dezenas != 1 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${dezenas} dezenas.`);
+
+            }else if(centenas == 0 && dezenas == 1 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${dezenas} dezena e ${unidades} unidade.`);            
+            }else if(centenas == 0 && dezenas != 1 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${dezenas} dezenas e ${unidades} unidade.`);
+            }else if(centenas == 0 && dezenas == 1 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${dezenas} dezena e ${unidades} unidades.`);
+            }else if(centenas == 0 && dezenas != 1 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${dezenas} dezenas e ${unidades} unidades.`);
+                
+            }else if(centenas == 1 && dezenas == 0 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${centenas} centena.`);
+            }else if(centenas == 1 && dezenas == 0 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centena e ${unidades} unidade.`);
+            }else if(centenas == 1 && dezenas == 1 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${centenas} centena e ${dezenas} dezena.`);
+            }else if(centenas != 1 && dezenas == 0 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas.`);
+            }else if(centenas != 1 && dezenas == 0 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas e ${unidades} unidade.`);
+            }else if(centenas != 1 && dezenas == 1 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas e ${dezenas} dezena.`);
+            }else if(centenas != 1 && dezenas == 0 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas e ${unidades} unidades.`);
+            }else if(centenas != 1 && dezenas != 1 && unidades == 0){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas e ${dezenas} dezenas.`);
+
+                
+            }else if(centenas == 1 && dezenas == 1 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centena, ${dezenas} dezena e ${unidades} unidade.`);
+            }else if(centenas != 1 && dezenas == 1 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas, ${dezenas} dezena e ${unidades} unidade.`);
+            }else if(centenas != 1 && dezenas != 1 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidade.`);
+            }else if(centenas != 1 && dezenas == 1 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centenas, ${dezenas} dezena e ${unidades} unidades.`);
+            }else if(centenas == 1 && dezenas != 1 && unidades == 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centena, ${dezenas} dezenas e ${unidades} unidade.`);
+            }else if(centenas == 1 && dezenas != 1 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centena, ${dezenas} dezenas e ${unidades} unidades.`);
+            }else if(centenas == 1 && dezenas == 1 && unidades != 1){
+                window.alert(`O número ${numero} é composto por ${centenas} centena, ${dezenas} dezena e ${unidades} unidades.`);
+            }else{
+                window.alert(`O número ${numero} é composto por ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>19° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

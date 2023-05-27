@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>13° Questão</title>
+        
+        <!-- Lista 2 Questão 13
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido. -->
+
+        <script>
+            var dia = Number(window.prompt(`Digite um número de 1 a 7:`));             
+            var comprovacao1 = dia / 1;
+
+            // "loop" para comprovar se dia não é um valor inválido            
+            while(dia <= 0 || dia >=8 || comprovacao1 != dia){                
+                window.alert(`Valor inválido!`);
+                var dia = Number(window.prompt(`Digite um número de 1 a 7:`)); 
+                var comprovacao1 = dia / 1;
+            }
+
+            if(dia == 1){
+                window.alert(`Hoje é Domingo.`);
+            }else if(dia == 2){
+                window.alert(`Hoje é Segunda.`);
+            }else if(dia == 3){
+                window.alert(`Hoje é Terça.`);
+            }else if(dia == 4){
+                window.alert(`Hoje é Quarta.`);
+            }else if(dia == 5){
+                window.alert(`Hoje é Quinta.`);
+            }else if(dia == 6){
+                window.alert(`Hoje é Sexta.`);
+            }else{
+                window.alert(`Hoje é Sábado.`);
+            }
+        
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>13° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 12
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Foram anotadas as idades e alturas de 30 alunos. Faça um Programa que determine quantos alunos com mais de 13 anos possuem altura inferior à média de altura desses alunos.-->
+
+
+    <script>
+        var idades = [];
+        var alturas = [];
+        var soma = 0;
+        for (var i = 1; i < 31; i++) {
+            var idade = Number(window.prompt(`Digite a idade da ${i}° pessoa:`));
+            var int = idade % 2;
+            while (isNaN(idade) || idade < 0 || idade > 120 || int != 1 && int != 0) {
+                window.alert(`Você não digitou um valor válido!`)
+                var idade = Number(window.prompt(`Digite a idade da ${i}° pessoa:`));
+            }
+            idades.push(idade);
+
+            var altura = Number(window.prompt(`Digite a altura em metros da ${i}° pessoa:`));
+            while (isNaN(altura) || altura < 0 || altura > 2.5) {
+                window.alert(`Você não digitou um valor válido!`)
+                var altura = Number(window.prompt(`Digite a altura em metros da ${i}° pessoa:`));
+            }
+            alturas.push(altura);
+            soma += altura;
+        }
+
+        var media = soma / 4;
+        var alunos = 0;
+
+        for (var i = 0; i < 30; i++) {
+            if(idades[i] > 13 && alturas[i] < media){
+                alunos++;
+            }
+        }
+
+        if(alunos == 0){
+            window.alert(`Nenhum aluno com mais de 13 anos possue altura inferior à média de altura da pesquisa.`);
+        }else if(alunos == 1){
+            window.alert(`Um aluno com mais de 13 anos que possue altura inferior à média de altura da pesquisa.`);
+        }else{
+            window.alert(`São ${alunos} alunos com mais de 13 anos que possuem altura inferior à média de altura da pesquisa.`);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>12° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

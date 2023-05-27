@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 4
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um Programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima as consoantes.-->
+
+
+    <script>
+        var vetores = [];
+        for (var i = 1; i < 11; i++) {
+            var vetor = String(window.prompt(`Digite o ${i}° caractere:`));
+            while (vetor == "" || vetor.length != 1) {
+                window.alert(`Você não digitou um caractere!`)
+                var vetor = String(window.prompt(`Digite o ${i}° CARACTERE:`));
+            }
+            var vetor = vetor.toUpperCase();
+
+            //h e y não é uma consoante mds
+            if (vetor == "B" || vetor == "C" || vetor == "D" || vetor == "F" || vetor == "G" || vetor == "J" || vetor == "K" || vetor == "L" || vetor == "M" || vetor == "N" || vetor == "P" || vetor == "Q" || vetor == "R" || vetor == "S" || vetor == "T" || vetor == "V" || vetor == "W" || vetor == "X" || vetor == "Z") {
+                vetores.push(vetor);
+            }
+        }
+
+        window.alert(`As consoantes digitadas foram: ${vetores}.`);
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>4° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

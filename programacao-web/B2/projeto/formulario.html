@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body id="formulario">
+    <div class="row justify-content-between" id="topo">
+        <div class="col-6">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb caminho">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Formulário</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-6">
+            <ol id="volta" class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Voltar</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <form>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- CPF -->
+                <div class="col-2">
+                    <fieldset class="PBorda" id="cpf" data-toggle="tooltip" data-placement="top"
+                        title="Digite o número do CPF">
+                        <legend class="PBorda w-auto">CPF</legend>
+                        <div>
+                            <label id="labelNumeroCpf">Número</label>
+                            <br>
+                            <input type="text" name="numeroCpf" id="numeroCpf" class="input"
+                                placeholder="000.000.000.00" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}.[0-9]{2}" size="10">
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <!-- Carteira Profissional -->
+                <div class="col-4">
+                    <fieldset class="PBorda" id="carteiraProfissional">
+                        <legend class="PBorda w-auto">Carteira Profissional</legend>
+
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Digite o número da Carteira Profissional">
+                            <label id="labelNumeroCP">Número</label>
+                            <br>
+                            <input type="text" name="numeroCP" id="numeroCP" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top" title="Selecione a data de expedição">
+                            <label id="labelDataEmissaoCP">Data expedição</label>
+                            <br>
+                            <input type="date" name="dataEmissaoCP" id="dataEmissaoCP" class="input">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- PIS -->
+                <div class="col-6">
+                    <fieldset class="PBorda" id="pis">
+                        <legend class="PBorda w-auto">PIS</legend>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o número do PIS">
+                            <label id="labelNumeroPis">Número</label>
+                            <br>
+                            <input type="text" name="numeroPis" id="numeroPis" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Selecione a data de cadastramento do PIS">
+                            <label id="labelDataCadastramentoPis">Data cadastramento</label>
+                            <br>
+                            <input type="date" name="dataCadastramentoPis" id="dataCadastramentoPis" class="input">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- RG -->
+                <div class="col-6">
+                    <fieldset class="PBorda" id="rg">
+                        <legend class="PBorda w-auto">RG</legend>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o número do RG">
+                            <label id="labelNumeroRg">Número</label>
+                            <br>
+                            <input type="text" name="numeroRg" id="numeroRg" class="input" placeholder="0000000-0"
+                                pattern="[0-9]{7}-[0-9]{2}">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Selecione a data de emissão do RG">
+                            <label id="labelDataEmissãoRg">Data da emissão</label>
+                            <br>
+                            <input type="date" name="dataEmissãoRg" id="dataEmissãoRg" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o orgão emissor">
+                            <label id="labelOrgaoEmissorRg">Órgão emissor</label>
+                            <br>
+                            <input type="text" name="orgaoEmissorRg" id="orgaoEmissorRg" class="input" size="3">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite a sigla do Estado">
+                            <label id="labelUfRg">UF</label>
+                            <br>
+                            <input type="text" name="ufRg" id="ufRg" class="input" size="1">
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <!-- Título de eleitor -->
+                <div class="col-6">
+                    <fieldset class="PBorda" id="tituloEleitor">
+                        <legend class="PBorda w-auto">Título de eleitor</legend>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o número do Título de eleitor">
+                            <label id="labelNumeroTE">Número</label>
+                            <br>
+                            <input type="text" name="numeroTE" id="numeroTE" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Selecione a data de emissão do Título de eleitor">
+                            <label id="labelDataEmissãoTE">Data da emissão</label>
+                            <br>
+                            <input type="date" name="dataEmissãoTE" id="dataEmissãoTE" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite a zona de eleição">
+                            <label id="labelZona">Zona</label>
+                            <br>
+                            <input type="text" name="zona" id="zona" class="input" size="1">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite a seção de eleição">
+                            <label id="labelSecao">Seção</label>
+                            <br>
+                            <input type="text" name="secao" id="secao" class="input" size="1">
+                        </div>
+                    </fieldset>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <!-- Número de inscrição do INSS -->
+                <div class="col-6">
+                    <fieldset class="PBorda" id="inss">
+                        <legend class="PBorda w-auto">Número de inscrição do INSS</legend>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o número da inscrição do INSS">
+                            <label id="labelNumeroInss">Número</label>
+                            <br>
+                            <input type="text" name="numeroInss" id="numeroInss" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Selecione a data de cadastramento do INSS">
+                            <label id="labelDataCadastramentoInss">Data cadastramento</label>
+                            <br>
+                            <input type="text" name="dataCadastramentoInss" id="dataCadastramentoInss" class="input" size="10">
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <!-- Certificado de reservista -->
+                <div class="col-6">
+                    <fieldset class="PBorda" id="certificadoReservista">
+                        <legend class="PBorda w-auto">Certificado de reservista</legend>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Digite o número do Certificado de reservista">
+                            <label id="labelNumeroCR">Número</label>
+                            <br>
+                            <input type="text" name="numeroCR" id="numeroCR" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Digite a Categoria do Certificado de reservista">
+                            <label id="labelCategoriaCR">Categoria</label>
+                            <br>
+                            <input type="text" name="categoriaCR" id="categoriaCR" class="input">
+                        </div>
+                    </fieldset>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <!-- Registro Nacional de Estrangeiro -->
+                <div class="col-6">
+                    <fieldset class="PBorda" id="registroNacionalEstrangeiro">
+                        <legend class="PBorda w-auto">Registro Nacional de Estrangeiro</legend>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Digite o número do Registro Nacional de Estrangeiro">
+                            <label id="labelNumeroRNE">Número carteira mod. 19</label>
+                            <br>
+                            <input type="text" name="numeroRNE" id="numeroRNE" class="input">
+                        </div>                        
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Selecione a data de expedição do Registro Nacional de Estrangeiro">
+                            <label id="labelDataEmissaoRNE">Data expedição</label>
+                            <br>
+                            <input type="date" name="dataEmissaoRNE" id="dataEmissaoRNE" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Digite o orgão emissor do Registro Nacional de Estrangeiro">
+                            <label id="labelOrgaoEmissorRNE">Órgão emissor</label>
+                            <br>
+                            <input type="text" name="orgaoEmissorRNE" id="orgaoEmissorRNE" class="input">
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <!-- RIC -->
+                <div class="col-6">
+                    <fieldset class="PBorda" data-toggle="tooltip" data-placement="top"
+                        title="Digite sua data de nascimento" id="ric">
+                        <legend class="PBorda w-auto">RIC</legend>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o número do RIC">
+                            <label id="labelNumeroRic">Número</label>
+                            <br>
+                            <input type="text" name="numeroRic" id="numeroRic" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Selecione a data de emissão do RIC">
+                            <label id="labelDataEmissãoRic">Data da emissão</label>
+                            <br>
+                            <input type="date" name="dataEmissãoRic" id="dataEmissãoRic" class="input">
+                        </div>
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o orgão emissor">
+                            <label id="labelOrgaoEmissorRic">Órgão emissor</label>
+                            <br>
+                            <input type="text" name="orgaoEmissorRic" id="orgaoEmissorRic" class="input">
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <!-- Carteira de habilitação -->
+                <div class="col-12">
+                    <fieldset class="PBorda" id="carteiraHabilitação">
+                        <legend class="PBorda w-auto">Carteira de habilitação</legend>
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Digite o número da Carteira de Habilitação">
+                            <label id="labelNumeroCH">Número</label>
+                            <br>
+                            <input type="text" name="numeroCH" id="numeroCH" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Selecione a data de validade da carteira de habilitação">
+                            <label id="labelDataValidadeCH">Data validade</label>
+                            <br>
+                            <input type="date" name="dataValidadeCH" id="dataValidadeCH" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top" title="Selecione a data da 1ª Habilitação">
+                            <label id="labelDataHabilitacaoCH">Data 1ª habilitação</label>
+                            <br>
+                            <input type="date" name="dataHabilitacaoCH" id="dataHabilitacaoCH" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top" title="Digite a Categoria">
+                            <label id="labelCategoriaCH">Categoria</label>
+                            <br>
+                            <input type="text" name="categoriaCH" id="categoriaCH" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top" title="Digite o orgão emissor">
+                            <label id="labelOrgaoEmissorCH">Órgão emissor</label>
+                            <br>
+                            <input type="text" name="orgaoEmissorCH" id="orgaoEmissorCH" class="input">
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top" title="Selecione a sigla do Estado">
+                            <label id="labelUfCH">UF</label>
+                            <br>
+                            <select class="input" id="=Status" name="estado">
+                                <option value="0">--</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                        </div>
+
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Selecione a data de expedição da carteira de habilitação">
+                            <label id="labelDataEmissaoCH">Data expedição</label>
+                            <br>
+                            <input type="date" name="dataEmissaoCH" id="dataEmissaoCH" class="input">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="assinatura">
+            <button type="submit" class="button" id="assinaturaDigital">Assinatura Digital</button>
+            <input type="checkbox" name="checkAssinatura" id="checkAssinatura" class="input">
+            <label id="labelAssinatura">Gera assinatura digitalizada nos demostrativos contábeis</label>
+        </div>
+
+    </form>
+
+    <br><br>
+
+    <button type="submit" class="btn btn-secondary" id="button">Mostra/Ocultar</button>
+    <a id="bot2" href="#topo">Voltar ao topo</a>    
+
+    <script>
+
+        $(document).ready(function () {
+            $("#button").click(function () {
+                $("form").toggle()
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

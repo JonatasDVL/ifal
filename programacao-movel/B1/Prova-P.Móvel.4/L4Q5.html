@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 5
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um Programa que leia 20 números inteiros e armazene-os num vetor. Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Imprima os três vetores.-->
+
+
+    <script>
+        var vetores = [];
+        var vetoresImpar = [];
+        var vetoresPar = [];
+
+        for (var i = 1; i < 21; i++) {
+            var vetor = Number(window.prompt(`Digite o ${i}° número inteiro:`));
+            var int = vetor % 2;
+            while (isNaN(vetor) || int != 1 && int != -1 && int != 0) {
+                window.alert(`Você não digitou um número inteiro!`)
+                var vetor = Number(window.prompt(`Digite o ${i}° NÚMERO INTEIRO:`));
+                var int = vetor % 2;
+            }
+
+            if (int == 1 || int == -1) {
+                vetoresImpar.push(vetor);
+            } else if (int == 0) {
+                vetoresPar.push(vetor);
+            }
+            vetores.push(vetor);
+
+        }
+
+        window.alert(`Os números digitados foram: ${vetores};\nOs números ímpares digitados: ${vetoresImpar};\nOs números pares digitados: ${vetoresPar}.`);
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>5° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

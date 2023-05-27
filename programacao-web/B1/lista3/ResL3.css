@@ -1,0 +1,20 @@
+body {
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-size: 18px;
+}
+
+
+h4 {
+    text-shadow: 1px 1px 2px rgb(110, 110, 110);
+}
+
+.button {
+    color: rgb(0, 0, 0);
+    padding: 8px 15px;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: rgb(255, 255, 255);
+}

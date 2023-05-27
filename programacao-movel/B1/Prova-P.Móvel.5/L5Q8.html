@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8° Questão - Funções</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 8
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!--Faça uma função que informe a quantidade de dígitos de um determinado número inteiro informado.-->
+
+    <script>
+        function quantidadeDigitos() {
+            var n1 = Number(document.getElementById("n1").value);
+            var inteiro = n1 % 2;
+            n1 = n1.toString();
+            var digitos = n1.length;
+            if (digitos >= 1 && inteiro == 1 || inteiro == 0) {
+                document.getElementById("res").innerHTML = (`${digitos} dígitos.`);
+            } else {
+                document.getElementById("res").innerHTML = (`Valor inválido`);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>8° Questão - Funções</h1>
+
+    <p>Adicione um número:</p>
+    <input type="Number" id="n1">
+
+    <br>
+
+    <p>Clique no butão saber quantos dígitos têm o número:</p>
+    <button class="button" onclick="quantidadeDigitos()">butão</button>
+
+    <br><br>
+
+    <p>O número tem: </p>
+    <p id="res"></p>
+
+    <br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

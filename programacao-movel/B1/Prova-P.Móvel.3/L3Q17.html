@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>17° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 17
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120.-->
+
+
+        <script>
+            var numero = Number(window.prompt(`Digite um número inteiro e positivo:`));  
+
+            while(isNaN(numero) || numero < 1){
+                window.alert(`Você digitou um valor errado!`);
+                var numero = Number(window.prompt(`Digite um número inteiro e positivo:`));  
+            }
+
+            var fator = numero;
+            var fatorial = numero;
+
+            while(fator > 1){
+                var fator = fator - 1;
+                var fatorial = fatorial * fator;
+            }
+
+            window.alert(`Fatorial do número ${numero} é ${fatorial}`);
+
+
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>17° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

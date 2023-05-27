@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 14
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+                "Telefonou para a vítima?"
+                "Esteve no local do crime?"
+                "Mora perto da vítima?"
+                "Devia para a vítima?"
+                "Já trabalhou com a vítima?" 
+            O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".-->
+
+
+    <script>
+        var respostas = [];
+        window.alert(`Responda as futuras perguntas com S(SIM) ou N(NÃO)!`);
+
+        var resposta = String(window.prompt(`Telefonou para a vítima?`));
+        resposta = resposta.substring(0, 1);
+        resposta = resposta.toUpperCase();
+        while (resposta != "S" && resposta != "N") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            resposta = String(window.prompt(`Responda novamente a pergunta: Telefonou para a vítima?`));
+            resposta = resposta.substring(0, 1);
+            resposta = resposta.toUpperCase();
+        }
+
+        if (resposta == "S") {
+            respostas.push(1);
+        } else {
+            respostas.push(0);
+        }
+
+        resposta = String(window.prompt(`Esteve no local do crime?`));
+        resposta = resposta.substring(0, 1);
+        resposta = resposta.toUpperCase();
+        while (resposta != "S" && resposta != "N") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            resposta = String(window.prompt(`Responda novamente a pergunta: Esteve no local do crime?`));
+            resposta = resposta.substring(0, 1);
+            resposta = resposta.toUpperCase();
+        }
+
+        if (resposta == "S") {
+            respostas.push(1);
+        } else {
+            respostas.push(0);
+        }
+
+        resposta = String(window.prompt(`Mora perto da vítima`));
+        resposta = resposta.substring(0, 1);
+        resposta = resposta.toUpperCase();
+        while (resposta != "S" && resposta != "N") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            var resposta = String(window.prompt(`Responda novamente a pergunta: Mora perto da vítima?`));
+            resposta = resposta.substring(0, 1);
+            resposta = resposta.toUpperCase();
+        }
+
+        if (resposta == "S") {
+            respostas.push(1);
+        } else {
+            respostas.push(0);
+        }
+
+        resposta = String(window.prompt(`Devia para a vítima?`));
+        resposta = resposta.substring(0, 1);
+        resposta = resposta.toUpperCase();
+        while (resposta != "S" && resposta != "N") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            resposta = String(window.prompt(`Responda novamente a pergunta: Devia para a vítima?`));
+            resposta = resposta.substring(0, 1);
+            resposta = resposta.toUpperCase();
+        }
+
+        if (resposta == "S") {
+            respostas.push(1);
+        } else {
+            respostas.push(0);
+        }
+
+        resposta = String(window.prompt(`Já trabalhou com a vítima?`));
+        resposta = resposta.substring(0, 1);
+        resposta = resposta.toUpperCase();
+        while (resposta != "S" && resposta != "N") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            resposta = String(window.prompt(`Responda novamente a pergunta: Já trabalhou com a vítima?`));
+            resposta = resposta.substring(0, 1);
+            resposta = resposta.toUpperCase();
+        }
+
+        if (resposta == "S") {
+            respostas.push(1);
+        } else {
+            respostas.push(0);
+        }
+
+        var resultado = 0;
+
+        for (var i = 0; i < 5; i++) {
+            resultado += respostas[i];
+        }
+
+        if (resultado == 5) {
+            window.alert(`A pessoa é um assassino!`);
+        } else if (resultado == 4 || resultado == 3) {
+            window.alert(`A pessoa é um cúmplice!`);
+        } else if (resultado == 2) {
+            window.alert(`A pessoa é um suspeito!`);
+        } else {
+            window.alert(`A pessoa é um inocente!`);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>14° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

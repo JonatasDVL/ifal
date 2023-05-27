@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>20° Questão</title>
+        
+        <!-- Lista 2 Questão 20
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar:
+            A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
+            A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;
+            A mensagem "Aprovado com Distinção", se a média for igual a 10. -->
+
+
+        <script>
+            var nota1 = Number(window.prompt(`Digite o valor da sua primeira nota: `)); 
+            var comprovacao = nota1 / 1;
+
+            // "loop" para comprovar que nota1 está conforme os padrões
+            while((nota1 < 0 || nota1 > 10) && nota1 != comprovacao){
+                window.alert(`Você digitou um valor inválido, pois o valor da primeira nota tem que está entre 0 e 10`);
+                var nota1 = Number(window.prompt(`Digite o valor da sua primeira nota: `));  
+                var comprovacao = nota1 / 1;
+            }
+
+            var nota2 = Number(window.prompt(`Digite o valor da sua segunda nota: `));
+            var comprovacao = nota2 / 1;
+
+            // "loop" para comprovar que nota2 está conforme os padrões
+            while((nota2 < 0 || nota2 > 10) && nota2 != comprovacao){
+                window.alert(`Você digitou um valor inválido, pois o valor da sua segunda nota tem que está entre 0 e 10.`); 
+                var nota2 = Number(window.prompt(`Digite o valor da sua segunda nota: `));  
+                var comprovacao = nota2 / 1;
+            }
+
+            var nota3 = Number(window.prompt(`Digite o valor da sua terceira nota: `));
+            var comprovacao = nota3 / 1;
+
+            // "loop" para comprovar que nota3 está conforme os padrões
+            while((nota3 < 0 || nota3 > 10) && nota3 != comprovacao){
+                window.alert(`Você digitou um valor inválido, pois o valor da sua terceira nota tem que está entre 0 e 10.`); 
+                var nota3 = Number(window.prompt(`Digite o valor da sua terceira nota: `));  
+                var comprovacao = nota3 / 1;
+            }
+
+            var media = ((nota1 + nota2 + nota3) / 3).toFixed(2);
+
+            // dizendo se a o aluno passou ou não
+            if(media == 10){
+                window.alert(`A sua media foi ${media}, logo você foi aprovado com distinção!`);
+            }else if(media >= 7){
+                window.alert(`A sua media foi ${media}, logo você foi aprovado!`);
+            }else{
+                window.alert(`A sua media foi ${media}, logo você foi reprovado!`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>20° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

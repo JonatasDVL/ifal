@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>27° Questão</title>
+        
+        <!-- Lista 2 Questão 27
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Uma fruteira está vendendo frutas com a seguinte tabela de preços:
+                                      Até 5 Kg           Acima de 5 Kg
+                Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
+                Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
+            Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente. -->
+
+        <script>
+            window.alert(`Tabela de promoções da fruteira "Humm Moranguu":
+            \n                                        Até 5 Kg          Acima de 5 Kg\n      Morango         R$ 2,50 por Kg          R$ 2,20 por Kg\n      Maçã               R$ 1,80 por Kg          R$ 1,50 por Kg 
+            \nCaso compre mais de 8 Kg em frutas ou o valor total da compra ultrapassar 25 reais, você receberá ainda um desconto de 10% sobre este total.`);
+            
+            var morango = Number(window.prompt(`Digite o peso dos morangos desejados:`));  
+
+            // "loop" para comprovar se o peso dos morangos estão em um formato correto
+            while(isNaN(morango) || morango < 0){
+                window.alert(`Você digitou um valor inválido, pois o peso dos morangos deve ser um valor MAIOR QUE 0 KG!`);
+                var morango = Number(window.prompt(`Digite o peso dos morangos desejados:`));
+            }
+
+            var maca = Number(window.prompt(`Digite o peso das maçãs desejadas:`));  
+
+            // "loop" para comprovar se o peso das maçãs estão em um formato correto
+            while(isNaN(maca) || maca < 0){
+                window.alert(`Você digitou um valor inválido, pois o peso das maçãs deve ser um valor MAIOR QUE 0 KG`);
+                var maca = Number(window.prompt(`Digite o peso das maçãs desejadas:`));
+            }
+
+            // definindo e dizendo qual o novo valor do salário do colaborador
+
+            if(maca <= 5){           
+                var precoMaca = (maca * 1.8).toFixed(2);          
+            
+            }else{
+                var desconto1 = (maca * 1.8 - maca * 1.5).toFixed(2);
+                var precoMaca = (maca * 1.8 - desconto1).toFixed(2);
+                var precoMaca2 = (maca * 1.8).toFixed(2);          
+            }
+
+            if(morango <= 5){
+                var precoMorango = (morango * 2.5).toFixed(2);
+
+            }else{
+                var desconto2 = (morango * 2.5 - morango * 2.2).toFixed(2);
+                var precoMorango = (morango * 2.5 - desconto2).toFixed(2);
+                var precoMorango2 = (morango * 2.5).toFixed(2);        
+            }
+
+
+            if(maca > 8 || precoMaca > 25){
+                var desconto1 = ((maca * 1.8 - maca * 1.5) + (maca * 1.5 / 10)).toFixed(2);
+                var precoMaca = (maca * 1.8 - desconto1).toFixed(2);
+            }
+            
+            if(morango > 8 || precoMorango > 25){
+                var desconto2 = ((morango * 2.5 - morango * 2.2) + (morango * 2.2 / 10)).toFixed(2);
+                var precoMorango = (morango * 2.5 - desconto2).toFixed(2);
+            }
+
+            var precoTotal = parseFloat(precoMorango) + parseFloat(precoMaca);
+
+        // informando o valor da compra e do desconto
+        if(morango == 0 && maca == 0){
+            window.alert(`Você não comprou nada!!`);
+        
+        }else if(maca <= 5 && morango == 0){
+            window.alert(`O peso das maças: ${maca}KG;\nO preço das maças: ${precoMaca} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(maca > 5 && morango == 0){
+            window.alert(`O peso das maças: ${maca}KG;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto das maças: ${precoMaca2} reais;\nO preço final das maças: ${precoMaca} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(morango <= 5 && maca == 0){
+            window.alert(`O peso dos morangos: ${morango}KG;\nO preço dos morangos: ${precoMorango} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(morango > 5 && maca == 0){
+            window.alert(`O peso dos morangos: ${morango}KG;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto dos morangos: ${precoMorango2} reais;\nO preço final dos morangos: ${precoMorango} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(maca <= 5 && morango <= 5){
+            window.alert(`O peso das maças: ${maca}KG;\nO preço das maças: ${precoMaca} reais;
+            \nO peso dos morangos: ${morango}KG;\nO preço dos morangos: ${precoMorango} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(maca > 5 && morango <= 5){
+            window.alert(`O peso das maças: ${maca}KG;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto das maças: ${precoMaca2} reais;\nO preço final das maças: ${precoMaca} reais;
+            \nO peso dos morangos: ${morango}KG;\nO preço final dos morangos: ${precoMorango} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(maca <= 5 && morango > 5){
+            window.alert(`O peso das maças: ${maca}KG;\nO preço das maças: ${precoMaca} reais;
+            \nO peso dos morangos: ${morango}KG;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto dos morangos: ${precoMorango2} reais;\nO preço final dos morangos: ${precoMorango} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        
+        }else if(maca > 5 && morango > 5){
+            window.alert(`O peso das maças: ${maca}KG;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto das maças: ${precoMaca2} reais;\nO preço final das maças: ${precoMaca} reais;
+            \nO peso dos morangos: ${morango}KG;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto dos morangos: ${precoMorango2} reais;\nO preço final dos morangos: ${precoMorango} reais;
+            \nO preço total da compra: ${precoTotal} reais.`);
+        }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>27° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

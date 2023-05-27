@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 15
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada de dados, faça:
+        Mostre a quantidade de valores que foram lidos;
+        Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
+        Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+        Calcule e mostre a soma dos valores;
+        Calcule e mostre a média dos valores;
+        Calcule e mostre a quantidade de valores acima da média calculada;
+        Calcule e mostre a quantidade de valores abaixo de sete;
+        Encerre o programa com uma mensagem;-->
+
+
+    <script>
+        var vetor = [];
+        var entrada = 0;
+        var soma = 0;
+        var quantidade = 0;
+        while (entrada != -1) {
+            quantidade++;
+            entrada = Number(window.prompt(`Digite a ${quantidade}° número:`));
+            while (isNaN(entrada)) {
+                window.alert(window.alert(`Você não digitou um número`))
+                entrada = Number(window.prompt(`Digite a ${quantidade}° número:`));
+            }
+            vetor.push(entrada);
+            soma += entrada;
+        }
+        var media = soma / quantidade;
+
+        var acimaDaMedia = 0;
+
+        for (var i = 0; i < quantidade; i++) {
+            if (vetor[i] > media) {
+                acimaDaMedia++;
+            }
+        }
+
+        var abaixoDoSete = 0;
+
+        for (var i = 0; i < quantidade; i++) {
+            if (vetor[i] < 7) {
+                abaixoDoSete++;
+            }
+        }
+
+        var vetorReverse = vetor;
+        vetorReverse.reverse();
+
+        window.alert(`\nQuantidade de valores que foram lidos: ${quantidade};\nTodos os valores na ordem em que foram informados: ${vetor};\nTodos os valores na ordem inversa em que foram informados: ${vetorReverse};\nA soma dos valores digitados: ${soma};\nA média dos valores digitados: ${media};\nQuantidade de valores acima da média calculada: ${acimaDaMedia};\nQuantidade de valores abaixo de 7: ${abaixoDoSete};\nFim hehehh...`);
+
+        // tenho que ajeitar //Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>15° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

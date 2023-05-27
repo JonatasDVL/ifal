@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>16° Questão</title>
+        
+        <!-- Lista 2 Questão 16
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
+            Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;
+            Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
+            Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
+            Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário; -->
+
+        <script>
+            var a = Number(window.prompt(`Digite o valor de (a): `)); 
+            var comprovacao = a / 1;
+
+            // "loop" para comprovar que a é um número
+            while(comprovacao != a){
+                window.alert(`Você digitou um valor inválido, pois (a) não pode ser um texto!`);
+                var a = Number(window.prompt(`Digite o valor de (a): `));  
+                var comprovacao = a / 1;
+            }
+
+            // caso (a) for igual a 0 então o programa para  
+            if(a != 0){
+                var b = Number(window.prompt(`Digite o valor de (b): `)); 
+                var comprovacao = b / 1;
+
+                // "loop" para comprovar que b é um número
+                while(comprovacao != b){
+                    window.alert(`Você digitou um valor inválido, pois (b) não pode ser um texto!`);
+                    var b = Number(window.prompt(`Digite o valor de (b): `));  
+                    var comprovacao = b / 1;
+                }
+                
+                var c = Number(window.prompt(`Digite o valor de (c): `)); 
+                var comprovacao = c / 1;
+
+                // "loop" para comprovar que c é um número
+                while(comprovacao != c){
+                    window.alert(`Você digitou um valor inválido, pois (c) não pode ser um texto!`);
+                    var c = Number(window.prompt(`Digite o valor de (c): `));  
+                    var comprovacao = c / 1;
+                }
+
+                var delta = (b ** 2) - (4 * a * c);
+                var raiz1 = (- b + Math. sqrt(delta)) / 2 * a; 
+                var raiz2 = (- b - Math. sqrt(delta)) / 2 * a;
+
+                // definindo e dizendo o delta da conta
+                
+                if(delta < 0){
+                    window.alert(`O delta é negativo, logo não possui raizes reais.`);
+                }else if(delta == 0){
+                    window.alert(`O delta é neutro, logo possui apenas uma raiz real: ${raiz1} e ${raiz1}`);
+                }else if(delta > 0){
+                    window.alert(`O delta é positivo, logo possui duas raizes reais: ${raiz1} e ${raiz2}`);
+                }else{
+                    window.alert(`Valor inválido!`);
+                }
+
+            }else{
+                window.alert(`A equação não é do segundo grau.`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>16° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

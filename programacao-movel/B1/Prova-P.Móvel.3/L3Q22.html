@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>22° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 22
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível.-->
+
+
+    </head>
+   
+    <body>
+                
+        <body>
+            <h1>22° Questão</h1>
+
+            <p>Número para teste: <input id="n" type="number" /> </p> 
+            
+            <br>
+
+            <button type="button" onclick="primo()">Clique aqui e verifique.</button> 
+            
+            <br>
+
+            <p>Resultado: <div id="res"></div></p> 
+         
+            <script>
+                function primo(){
+                var numero = parseInt(document.getElementById('n').value);
+                var resposta = document.getElementById('res');
+                var divisores = 0;
+                const divisores2 = [];          
+                
+                for(var count = 1 ; count <= numero ; count++)
+                    if(numero % count == 0)
+                        divisores2.push(count)
+                        divisores++;
+
+                    if(divisores == 2){
+                        resposta.innerHTML =`O número digitado é um número primo.`;
+                    }else{
+                        resposta.innerHTML = `O número digitado não é um número primo, pois é divisível por ${divisores2}.`;
+                    }
+                }
+
+            </script>
+                
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br> 
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html" id="buton1">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

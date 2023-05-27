@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>26° Questão</title>
+        
+        <!-- Lista 2 Questão 26
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+                Álcool:
+                até 20 litros, desconto de 3% por litro
+                acima de 20 litros, desconto de 5% por litro
+                
+                Gasolina:
+                até 20 litros, desconto de 4% por litro
+                acima de 20 litros, desconto de 6% por litro 
+                
+        Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90. -->
+
+        <script>
+            window.alert(`Promoções do posto "Só Gotinhas":\nGasolina:
+     • Comprando até 20 litros, você terá um desconto de 4% por litro;
+     • Já se você comprar acima de 20 litros, terás um desconto de 6% por litro. \nÁlcool:
+     • Comprando até 20 litros, você terá um desconto de 3% por litro.
+     • Já se você comprar acima de 20 litros, terás um desconto de 5% por litro;`);
+            var gasolina = Number(window.prompt(`Digite a quantidade de litros de gasolina:`));  
+
+            // "loop" para comprovar se a quantidade de gasolina está em um formato correto
+            while(isNaN(gasolina) || gasolina < 0){
+                window.alert(`Você digitou um valor inválido, pois a quantidade em litros de gasolina tem que ser um NÚMERO MAIOR QUE 0 LITROS!`);
+                var gasolina = Number(window.prompt(`Digite a quantidade de litros de gasolina:`));
+            }
+
+            var alcool = Number(window.prompt(`Digite a quantidade de litros de álcool:`));  
+
+            // "loop" para comprovar se a quantidade de álcool está em um formato correto
+            while(isNaN(alcool) || alcool < 0){
+                window.alert(`Você digitou um valor inválido, pois a quantidade em litros de álcool tem que ser um NÚMERO MAIOR QUE 0 LITROS!`);
+                var alcool = Number(window.prompt(`Digite a quantidade de litros de álcool:`));
+            }
+
+
+            // definindo o valor da gasolina e do álcool
+            if(gasolina <= 20){
+                var desconto1 = (gasolina * 2.5 * 4 / 100).toFixed(2);
+                var precoG = (gasolina * 2.5 - desconto1).toFixed(2);
+                var precoG2 = (gasolina * 2.5).toFixed(2);          
+
+            }else{
+                var desconto1 = (gasolina * 2.5 * 6 / 100).toFixed(2);
+                var precoG = (gasolina * 2.5 - desconto1).toFixed(2);
+                var precoG2 = (gasolina * 2.5).toFixed(2);          
+            }
+
+            if(alcool <= 20){
+                var desconto2 = (alcool * 1.9 * 3 / 100).toFixed(2);
+                var precoA = (alcool * 1.9 - desconto2).toFixed(2);           
+                var precoA2 = (alcool * 1.9).toFixed(2);          
+            }else{
+                var desconto2 = (alcool * 1.9 * 5 / 100).toFixed(2);
+                var precoA = (alcool * 1.9 - desconto2).toFixed(2);
+                var precoA2 = (alcool * 1.9).toFixed(2);          
+            }
+
+            var precoTotal = parseFloat(precoA) + parseFloat(precoG);
+
+        // informando o valor da compra e do desconto
+        if(gasolina == 0 && alcool == 0){
+            window.alert(`Você não comprou nada!!`);
+        }else if(gasolina <= 20 && alcool == 0){
+            window.alert(`Quantidade de litros de gasolina: ${gasolina}L;\nDesconto promocional da gasolina: 4%;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto da gasolina: ${precoG2} reais;\nO preço final da gasolina: ${precoG} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }else if(gasolina > 20 && alcool == 0){
+            window.alert(`Quantidade de litros de gasolina: ${gasolina}L;\nDesconto promocional da gasolina: 6%;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto da gasolina: ${precoG2} reais;\nO preço final da gasolina: ${precoG} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }else if(alcool <= 20 && gasolina == 0){
+            window.alert(`Quantidade de litros de ácool: ${alcool}L;\nDesconto promocional do ácool: 3%;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto do ácool: ${precoA2} reais;\nO preço final do ácool: ${precoA} reais;\nO preço total da compra:${precoTotal} reais.`);
+        }else if(alcool > 20 && gasolina == 0){
+            window.alert(`Quantidade de litros de ácool: ${alcool}L;\nDesconto promocional do ácool: 5%;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto do ácool: ${precoA2} reais;\nO preço final do ácool: ${precoA} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }else if(gasolina <= 20 && alcool <= 20){
+            window.alert(`Quantidade de litros de gasolina: ${gasolina}L;\nDesconto promocional da gasolina: 4%;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto da gasolina: ${precoG2} reais;\nO preço final da gasolina: ${precoG} reais;
+            \nQuantidade de litros de ácool: ${alcool}L;\nDesconto promocional do ácool: 3%;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto do ácool: ${precoA2} reais;\nO preço final do ácool: ${precoA} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }else if(gasolina > 20 && alcool <= 20){
+            window.alert(`Quantidade de litros de gasolina: ${gasolina}L;\nDesconto promocional da gasolina: 6%;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto da gasolina: ${precoG2} reais;\nO preço final da gasolina: ${precoG} reais;
+            \nQuantidade de litros de ácool: ${alcool}L;\nDesconto promocional do ácool: 3%;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto do ácool: ${precoA2} reais;\nO preço final do ácool: ${precoA} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }else if(gasolina <= 20 && alcool > 20){
+            window.alert(`Quantidade de litros de gasolina: ${gasolina}L;\nDesconto promocional da gasolina: 4%;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto da gasolina: ${precoG2} reais;\nO preço final da gasolina: ${precoG} reais;
+            \nQuantidade de litros de ácool: ${alcool}L;\nDesconto promocional do ácool: 5%;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto do ácool: ${precoA2} reais;\nO preço final do ácool: ${precoA} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }else if(gasolina > 20 && alcool > 20){
+            window.alert(`Quantidade de litros de gasolina: ${gasolina}L;\nDesconto promocional da gasolina: 6%;\nO valor do desconto: ${desconto1} reais;\nO preço sem o desconto da gasolina: ${precoG2} reais;\nO preço final da gasolina: ${precoG} reais;
+            \nQuantidade de litros de ácool: ${alcool}L;\nDesconto promocional do ácool: 5%;\nO valor do desconto: ${desconto2} reais;\nO preço sem o desconto do ácool: ${precoA2} reais;\nO preço final do ácool: ${precoA} reais;
+            \nO preço total da compra:${precoTotal} reais.`);
+        }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>26° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

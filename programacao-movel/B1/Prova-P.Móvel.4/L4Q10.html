@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 10
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!--Faça um Programa que leia dois vetores com 10 elementos cada. Gere um terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos elementos intercalados dos dois outros vetores.-->
+
+    <script>
+        var vetor1 = [];
+        var vetor2 = [];
+        var vetor3 = [];
+
+        for (var i = 1; i < 11; i++) {
+            var v = Number(window.prompt(`Digite o ${i}° número da 1° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 1° lista:`));
+            }
+            vetor1.push(v);
+        }
+
+        for (var i = 1; i < 11; i++) {
+            var v = Number(window.prompt(`Digite o ${i}° número da 2° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 2° lista:`));
+            }
+            vetor2.push(v);
+        }
+        
+        for (var i = 0; i < 10; i++) {
+            vetor3.push(vetor1[i])
+            vetor3.push(vetor2[i])
+        }
+
+        /*for (var i = 1; i < 11; i++) {
+            var v = Number(window.prompt(`Digite o ${i}° número da 1° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 1° lista:`));
+            }
+            vetor3.push(v);
+
+            var v = Number(window.prompt(`Digite o ${i}° número da 2° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 2° lista:`));
+            }
+            vetor3.push(v);
+        }*/
+
+        window.alert(`A 3° lista é formado pela intercalação das duas outras listas. Logo o resultado da 3° lista é ${vetor3}`);
+
+    </script>
+
+</head>
+
+<body>
+    <h1>10° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

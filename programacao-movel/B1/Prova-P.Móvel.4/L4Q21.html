@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 21
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um programa que carregue uma lista com os modelos de cinco carros (exemplo de modelos: FUSCA, GOL, VECTRA etc). Carregue uma outra lista com o consumo desses carros, isto é, quantos quilômetros cada um desses carros faz com um litro de combustível. Calcule e mostre:
+            
+        O modelo do carro mais econômico;
+        Quantos litros de combustível cada um dos carros cadastrados consome para percorrer uma distância de 1000 quilômetros e quanto isto custará, considerando um que a gasolina custe R$ 2,25 o litro. Abaixo segue uma tela de exemplo. O disposição das informações deve ser o mais próxima possível ao exemplo. Os dados são fictícios e podem mudar a cada execução do programa.
+            
+            Comparativo de Consumo de Combustível
+
+            Veículo 1
+            Nome: fusca
+            Km por litro: 7
+            Veículo 2
+            Nome: gol
+            Km por litro: 10
+            Veículo 3
+            Nome: uno
+            Km por litro: 12.5
+            Veículo 4
+            Nome: Vectra
+            Km por litro: 9
+            Veículo 5
+            Nome: Peugeout
+            Km por litro: 14.5
+
+            Relatório Final
+            1 - fusca           -    7.0 -  142.9 litros - R$ 321.43
+            2 - gol             -   10.0 -  100.0 litros - R$ 225.00
+            3 - uno             -   12.5 -   80.0 litros - R$ 180.00
+            4 - vectra          -    9.0 -  111.1 litros - R$ 250.00
+            5 - peugeout        -   14.5 -   69.0 litros - R$ 155.17
+            O menor consumo é do peugeout.-->
+
+    <script>
+        var carros = [];
+        var valores = [];
+        var litros = [];
+        var totais = [];
+        var j = 1;
+        for (var i = 0; i < 5; i++) {
+            var carro = String(window.prompt(`Digite o nome do veículo ${j}:`));
+            carros.push(carro);
+
+            var valor = String(window.prompt(`Digite quantos KMs por litro o veículo ${j} faz:`));
+            while (isNaN(valor) || valor < 0) {
+                window.alert(`Você digitou errado um valor inválido!`);
+                valor = String(window.prompt(`Digite quantos KMs por litro o veículo ${j} faz:`));
+            }
+            valores.push(valor);
+
+            var litro = 1000 / valor;
+            litros.push(litro);
+
+            var total = litro * 2.5;
+            totais.push(total);
+
+            j++;
+        }
+
+        var menor = Math.min(totais[0], totais[1], totais[2], totais[3], totais[4]);
+        var j = 1;
+        for (var i = 0; i < 5; i++) {
+            if (totais[i] == menor) {
+                menor = j;
+            }
+            j++;
+        }
+        console.log(menor);
+        
+        switch (menor) {
+            case 1:
+                menor = carro[0];
+                break;
+            case 2:
+                menor = carro[1];
+                break;
+            case 3:
+                menor = carro[2];
+                break;
+            case 4:
+                menor = carro[3];
+                break;
+            case 5:
+                menor = carro[4];
+                break;
+        }
+        
+        console.log(menor);
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <h1>21° Questão</h1>
+        <script>
+            document.write(`Relatório Final:<br><br>`);
+            document.write(`1 - ${carros[0]} - ${valores[0]} - ${litros[0]} litros - R$ ${totais[0]}<br>`);
+            document.write(`2 - ${carros[1]} - ${valores[1]} - ${litros[1]} litros - R$ ${totais[1]}<br>`);
+            document.write(`3 - ${carros[2]} - ${valores[2]} - ${litros[2]} litros - R$ ${totais[2]}<br>`);
+            document.write(`4 - ${carros[3]} - ${valores[3]} - ${litros[3]} litros - R$ ${totais[3]}<br>`);
+            document.write(`5 - ${carros[4]} - ${valores[4]} - ${litros[4]} litros - R$ ${totais[4]}<br><br>`);
+            document.write(`O menor consumo é do ${menor}.`);
+
+        </script>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL4.html" id="buton1">
+            <input type="button" class="button" value="Voltar">
+        </a>
+
+    </body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>28° Questão</title>
+        
+        <!-- Lista 2 Questão 28
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
+                                      Até 5 Kg           Acima de 5 Kg
+                File Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg
+                Alcatra         R$ 5,90 por Kg          R$ 6,80 por Kg
+                Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
+            Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total da compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar. -->
+
+        <script>
+            window.alert(`Tabela de promoções do Hipermercado Tabajara:
+            \n                                    Até 5 Kg           Acima de 5 Kg\n     Filé Duplo     R$ 4,90 por Kg          R$ 5,80 por Kg\n     Alcatra          R$ 5,90 por Kg          R$ 6,80 por Kg\n     Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
+            \nSe compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total da compra. 
+            \nRegras da promoção:cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente.`);
+
+            var carne = String(window.prompt(`Digite F(Filé Duplo), A(Alcatra) ou P(Picanha) para escolher uma das carnes da promoção:`));  
+
+            var carne = carne.substring(0, 1);
+
+            // "loop" para comprovar se a carne escolhida está "correta"
+            while(carne != "F" && carne != "A" && carne != "P" && carne != "f" && carne != "a" && carne != "p"){
+                window.alert(`Você digitou um valor inválido, pois você deve digitar F(Filé Duplo), A(Alcatra) ou P(Picanha)!`);
+                var carne = String(window.prompt(`Digite F(Filé Duplo), A(Alcatra) ou P(Picanha) para escolher uma das carnes da promoção:`));
+                var carne = carne.substring(0, 1);
+            }
+            
+            var cartao = String(window.prompt(`Digite S(SIM) ou N(NÃO) caso queira pagar com o cartão Tabajara:`));
+ 
+            var cartao = cartao.substring(0, 1);
+
+            // "loop" para comprovar se a carne escolhida está "correta"
+            while(cartao != "S" && cartao != "N" && cartao != "s" && cartao != "n"){
+                window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+                var carne = String(window.prompt(`Digite S(SIM) ou N(NÃO) caso queira pagar com o cartão Tabajara:`));
+                var carne = carne.substring(0, 1);
+            }
+
+            if(carne == "f" || carne == "F"){
+                var quantidade = Number(window.prompt(`Digite o peso do filé duplo que desejas comprar em Kg:`));  
+                var carneTipo = "File Duplo";
+
+                while(isNaN(quantidade) || quantidade <= 0){
+                    window.alert(`Você digitou um valor inválido, pois o peso do filé duplo deve ser um valor MAIOR QUE 0 Kg`);
+                    var quantidade = Number(window.prompt(`Digite o peso do filé duplo que desejas comprar em Kg:`));
+                }
+            
+                if(quantidade > 5){           
+                    var preco = (5 * 4.9 + (quantidade - 5) * 5.80).toFixed(2); 
+                    var desconto = 4.5;    
+                    var preco2 = (quantidade * 5.80).toFixed(2);               
+                }else{
+                    var desconto = (quantidade * 5.80 - quantidade * 4.9).toFixed(2);
+                    var preco = (quantidade * 5.80 - desconto).toFixed(2);
+                    var preco2 = (quantidade * 5.80).toFixed(2);          
+                }
+
+            }else if(carne == "a" || carne == "A"){
+                var quantidade = Number(window.prompt(`Digite o peso do alcatra que desejas comprar em Kg:`));  
+                var carneTipo = "Alcatra";
+
+                while(isNaN(quantidade) || quantidade <= 0){
+                    window.alert(`Você digitou um valor inválido, pois o peso do alcatra deve ser um valor MAIOR QUE 0 Kg`);
+                    var quantidade = Number(window.prompt(`Digite o peso do alcatra que desejas comprar em Kg:`));
+                }
+                
+                if(quantidade > 5){           
+                    var preco = (5 * 5.9 + (quantidade - 5) * 6.80).toFixed(2); 
+                    var desconto = 4.5; 
+                    var preco2 = (quantidade * 6.80).toFixed(2);                  
+                }else{
+                    var desconto = (quantidade * 6.80 - quantidade * 5.9).toFixed(2);
+                    var preco = (quantidade * 6.80 - desconto).toFixed(2);
+                    var preco2 = (quantidade * 6.80).toFixed(2);          
+                }
+            
+            }else if(carne == "p" || carne == "P"){
+                var quantidade = Number(window.prompt(`Digite o peso do picanha que desejas comprar em Kg:`));  
+                var carneTipo = "Picanha";
+
+                while(isNaN(quantidade) || quantidade <= 0){
+                    window.alert(`Você digitou um valor inválido, pois o peso do picanha deve ser um valor MAIOR QUE 0 Kg`);
+                    var quantidade = Number(window.prompt(`Digite o peso do picanha que desejas comprar em Kg:`));
+                }
+                
+                if(quantidade > 5){           
+                    var preco = (5 * 6.9 + (quantidade - 5) * 7.80).toFixed(2); 
+                    var desconto = 4.5; 
+                    var preco2 = (quantidade * 7.80).toFixed(2);             
+                }else{
+                    var desconto = (quantidade * 7.80 - quantidade * 6.9).toFixed(2);
+                    var preco = (quantidade * 7.80 - desconto).toFixed(2);
+                    var preco2 = (quantidade * 7.80).toFixed(2);          
+                }
+                
+            }
+
+            if(cartao == "s" || cartao == "S"){
+                var desconto = ((desconto) + (preco * 5 / 100)).toFixed(2);
+                var preco = (preco2 - desconto).toFixed(2);
+            }
+
+
+            // informando o tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
+            if(quantidade == 0){
+                window.alert(`Você não comprou nada!!`);
+            
+            }else if(cartao == "s" || cartao == "S"){
+                window.alert(`O tipo da carne: ${carneTipo}; \nO peso da carne: ${quantidade}Kg;\nTipo de pagamento: Cartão da loja;\nO valor do desconto: ${desconto} reais;\nO preço sem o desconto: ${preco2} reais;
+                \nO preço total da compra: ${preco} reais.`);
+            
+            }else if(cartao == "n" || cartao == "N"){
+                window.alert(`O tipo da carne: ${carneTipo}; \nO peso da carne: ${quantidade}Kg;\nTipo de pagamento: Cartão comum ou no dinheiro;\nO valor do desconto: ${desconto} reais;\nO preço sem o desconto: ${preco2} reais;
+                \nO preço total da compra: ${preco} reais.`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>28° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

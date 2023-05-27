@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormJônatasDuarte</title>
+    <link rel="stylesheet" href="StyleJônatasDuarte.css">        
+    <script>
+        function FuncaoZoeira() {
+            alert("Jônatas Duarte")
+    }
+
+    </script>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    
+    <h1> Cadastro no IFZU </h1>
+    
+    <form action="Jônatas&&AnaClara.html"> 
+        <table width="600">
+            <tr>
+                <td><label id="nome">Nome:</label></td>
+                <td><input type="text" name="Nome" id="name" class="input"></td>
+                <td><label>Data:</label></td>
+                <td><input type="date" name="Data" id="date" class="input"></td>
+            </tr>
+            <tr>
+                <td><label id="senha">Senha:</label></td>
+                <td><input type="password" name="Senha" id="password" class="input"></td>
+                <td><label id="sexo">Sexo:</label></td>
+                <td><label id="m"> M </label><input type="radio" name="Sexo" id="sex" class="input"> <label id="f"> F </label><input type="radio" name="Sexo" id="sex" class="input"> ND<input type="radio" name="Sexo" id="sex" class="input"></td>
+            </tr>
+            <tr>
+                <td><label id="email">E-mail:</label></td>
+                <td><input type="email" name="E-mail" id="email" class="input"></td>
+                <td><label id="estado">Estado:</label></td>
+                <td><select  class="input" id="=Status" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>É da zoeira:</label></td>
+                <td>Sim<input type="checkbox" name="Zoeira" id="zoeira" class="input">Não<input type="checkbox" name="Zoeira" id="zoeira" class="input"></td>
+                <td><label>Instagram:</label></td>
+                <td> <input type="hidden" name="Instagram1" id="instagram1" value="https://www.instagram.com/jonatasdvl/" class="input"><input type="hidden" name="Instagram2" id="instagram2" value="https://www.instagram.com/anaclaraalcantara_/" class="input"></td>
+            </tr>
+        </table>
+    
+    </form>
+
+        <br>
+
+        <button type="submit" class="button"
+        >Enviar</button>
+
+        <button type="button" class="button"
+        onclick="FuncaoZoeira();">
+        Zoeira</button>
+
+</body>
+</html>

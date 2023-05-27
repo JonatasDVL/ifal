@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4° Questão</title>
+        
+        <!-- Lista 1 Questão 4 
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que peça as 4 notas bimestrais e mostre a média.-->
+
+        <script>
+            var nota1 = Number(window.prompt(`Digite a nota do primeiro bimestre:`));
+            var nota2 = Number(window.prompt(`Digite a nota do segundo bimestre:`));
+            var nota3 = Number(window.prompt(`Digite a nota do terceiro bimestre:`));
+            var nota4 = Number(window.prompt(`Digite a nota do quarto bimestre:`));
+            var media = (nota1 + nota2 + nota3 + nota4)/4
+            window.alert(`A média das notas bimestrais é igual a ${media}.`);
+            
+            function FuncaoMostre() {
+                window.alert(`A nota dos bimestres:\n  1° bimestre = ${nota1} pontos;\n  2° bimestre = ${nota2} pontos;\n  3° bimestre = ${nota3} pontos;\n  4° bimestre = ${nota4} pontos.
+                \nA média das notas bimestrais é igual a ${media} pontos.`);
+        }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 0 0 15px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+        
+        <h1>4° Questão</h1>
+
+        <h4>Clique no butão [Mostre-me] para que o programa mostre o resultado novamente.</h4>
+        
+        <button class="button" onclick="FuncaoMostre()">Mostre-me</button>
+    
+        <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL1.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+            
+    </body>
+
+</html>

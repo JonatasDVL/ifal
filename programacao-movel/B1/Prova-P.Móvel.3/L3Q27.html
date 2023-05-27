@@ -1,0 +1,71 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>27° Questão</title>
+            <link rel="stylesheet" href="ResL3.css">
+            
+            <!-- Lista 3 Questão 27
+            Dupla:  Ezequiel Santana e Jônatas Duarte 
+            Prof: Italo Rodrigo da Silva Arruda
+            Disciplina: Programação Móvel 
+            Turma: 513
+            -->
+    
+            <!-- Faça um programa que calcule o número médio de alunos por turma. Para isto, peça a quantidade de turmas e a quantidade de alunos para cada turma. As turmas não podem ter mais de 40 alunos. -->
+    
+    
+            <script>    
+                var turmas = Number(window.prompt(`Digite o número de turmas:`));
+                var comprovacao = turmas % 2;
+
+                    while(isNaN(turmas) || turmas < 1 || comprovacao != 1 && comprovacao != 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var turmas = Number(window.prompt(`Digite o número de turmas:`));
+                        var comprovacao = turmas % 2;
+                    }
+                
+                var wile = turmas;
+                var alunoTotal = 0;
+
+                while(wile != 0){
+                var alunos = Number(window.prompt(`Digite a quantidade de alunos que tem na turma:`)); 
+                var comprovacao = alunos % 2; 
+                    while(isNaN(alunos) || alunos < 0 || alunos > 40|| comprovacao != 1 && comprovacao != 0){
+                        window.alert(`Você digitou um número inválido!`);
+                        var alunos = Number(window.prompt(`Digite a quantidade de alunos que tem na turma:`));
+                        var comprovacao = alunos % 2; 
+                    }
+                    var alunoTotal = alunoTotal + alunos;
+                    wile--;
+                }
+                
+                var media = alunoTotal / turmas;
+            </script>
+    
+        </head>
+       
+        <body>
+                    
+            <h1>27° Questão</h1>
+    
+            <script> 
+    
+                document.write(`A média de alunos por turma é de ${media} alunos.`);
+              
+            </script>
+    
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>  
+    
+    
+            <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+    
+            <a href="ResL3.html">
+                <input type="button" class="button" value="Voltar">
+                </a>
+    
+        </body>
+            
+    </html>

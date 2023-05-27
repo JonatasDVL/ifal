@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>12° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 12
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
+            Tabuada de 5:
+            5 X 1 = 5
+            5 X 2 = 10
+            ...
+            5 X 10 = 50;-->
+
+
+        <script>
+           var numero = Number(window.prompt(`Digite um número inteiro entre 1 e 10: `));  
+           var comprovacao = numero % 2;
+
+            while( isNaN(numero) || numero < 1 || numero > 10 || comprovacao != 1 && comprovacao != 0){
+                    window.alert(`Número digitado é um valor inválido!`);
+                    var numero = Number(window.prompt(`Digite um número inteiro entre 1 e 10: `));  
+                    var comprovacao = numero % 2;
+                }
+
+            var tabuada1 = 1 * numero;
+            var tabuada2 = 2 * numero;
+            var tabuada3 = 3 * numero;
+            var tabuada4 = 4 * numero;
+            var tabuada5 = 5 * numero;
+            var tabuada6 = 6 * numero;
+            var tabuada7 = 7 * numero;
+            var tabuada8 = 8 * numero;
+            var tabuada9 = 9 * numero;
+            var tabuada10 = 10 * numero;
+
+            window.alert(`Tabuada do ${numero}:\n${numero} x 1 = ${tabuada1};\n${numero} x 2 = ${tabuada2};\n${numero} x 3 = ${tabuada3};\n${numero} x 4 = ${tabuada4};\n${numero} x 5 = ${tabuada5};\n${numero} x 6 = ${tabuada6};\n${numero} x 7 = ${tabuada7};\n${numero} x 8 = ${tabuada8};\n${numero} x 9 = ${tabuada9};\n${numero} x 10 = ${tabuada10}.`);
+
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>12° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

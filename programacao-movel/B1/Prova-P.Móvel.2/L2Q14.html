@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>14° Questão</title>
+        
+        <!-- Lista 2 Questão 14
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+            Média de Aproveitamento  Conceito
+            Entre 9.0 e 10.0        A
+            Entre 7.5 e 9.0         B
+            Entre 6.0 e 7.5         C
+            Entre 4.0 e 6.0         D
+            Entre 4.0 e zero        E -->
+
+
+        <script>
+            var nota1 = Number(window.prompt(`Digite o valor da sua primeira nota: `)); 
+            var comprovacao1 = nota1 / 1;
+
+            // "loop" para comprovar que nota 1 está conforme os padrões
+            while(nota1 < 0 || nota1 > 10 || comprovacao1 != nota1){
+                window.alert(`Você digitou um valor inválido, pois o valor da primeira nota tem que está entre 0 e 10`);
+                var nota1 = Number(window.prompt(`Digite o valor da sua primeira nota: `));  
+                var comprovacao1 = nota1 / 1;
+            }
+
+            var nota2 = Number(window.prompt(`Digite o valor da sua segunda nota: `));
+            var comprovacao2 = nota2 / 1;
+
+            // "loop" para comprovar que nota 2 está conforme os padrões
+            while(nota2 < 0 || nota2 > 10 || comprovacao2 != nota2){
+                window.alert(`Você digitou um valor inválido, pois o valor da sua segunda nota tem que está entre 0 e 10.`); 
+                var nota2 = Number(window.prompt(`Digite o valor da sua segunda nota: `));  
+                var comprovacao2 = nota2 / 1;
+            }
+
+            var media = ((nota1 + nota2) / 2).toFixed(2);
+
+            // definindo e dizendo que o aluno passou ou não
+            if(media <= 10 && media >= 9){
+                window.alert(`A sua media foi ${media}, logo seu conceito é A e você foi aprovado com distinção!`);
+            }else if(media <= 9 && media >= 7.5){
+                window.alert(`A sua media foi ${media}, logo seu conceito é B e você foi aprovado!`);
+            }else if(media <= 7.5 && media >= 6){
+                window.alert(`A sua media foi ${media}, logo seu conceito é C e você foi aprovado!`);
+            }else if(media <= 6 && media >= 4){
+                window.alert(`A sua media foi ${media}, logo seu conceito é D e você foi reprovado!`);
+            }else{
+                window.alert(`A sua media foi ${media}, logo seu conceito é E e você foi reprovado!`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>14° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>17° Questão</title>
+        
+        <!-- Lista 2 Questão 17
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto. -->
+
+        <script>
+            var ano = Number(window.prompt(`Digite um ano: `)); 
+            var comprovacao = ano / 1;
+
+            // "loop" para comprovar que a é um número
+            while(comprovacao != ano){
+                window.alert(`Você digitou um valor inválido, pois (a) não pode ser um texto!`);
+                var ano = Number(window.prompt(`Digite o valor de (a): `));  
+                var comprovacao = ano / 1;
+            }
+
+            var divisao1 = ano % 4;
+            var divisao2 = ano % 100;
+            var divisao3 = ano % 400;
+            
+            if(divisao1 == 0 && divisao2 != 0){
+                window.alert(`O ano de ${ano} é um ano bissexto!`);
+            }else if(divisao1 == 0 && divisao3 == 0){
+                window.alert(`O ano de ${ano} é um ano bissexto!`);
+            }else{
+                window.alert(`O ano de ${ano} não é um ano bissexto!`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>17° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

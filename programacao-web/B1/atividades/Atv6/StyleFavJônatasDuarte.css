@@ -1,0 +1,100 @@
+body{
+    background-color: white;
+
+}
+
+table{
+    border-radius: 1px;
+    border-color: black;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+}
+
+td{
+    border-radius: 1px;
+    border-color: black;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+}
+
+#nome{
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+    color: cornsilk;
+}
+
+#filme{
+    color: darkgreen;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Times;
+}
+
+#filme2:visited{
+    color:lightblue;
+}
+
+#filme2:link{
+    color:red;
+}
+
+#filme2:hover{
+    color:yellow;
+}
+
+#receita{
+    color: darkblue;
+    text-transform: uppercase;
+    font-family: Arial;
+}
+
+#receita2:visited{
+    color:orangered;
+}
+
+#receita2:link{
+    color: green;
+}
+
+#receita2:hover{
+    color:brown;
+}
+
+#musica{
+    color: darkred;
+    text-decoration: underline;
+    font-family: Tahoma;
+}
+
+#musica2:visited{
+    color:white;
+}
+
+#musica2:link{
+    color: pink;
+}
+
+#musica2:hover{
+    color:black;
+}
+
+#pais{
+    color: yellow;
+    font-size: 20px;
+    text-decoration: line-through;
+    font-family: sans-serif;
+}
+
+#pais2:visited{
+    color: greenyellow;
+}
+
+#pais2:link{
+    color: gray;
+}
+
+#pais2:hover{
+    color:purple;
+}
+

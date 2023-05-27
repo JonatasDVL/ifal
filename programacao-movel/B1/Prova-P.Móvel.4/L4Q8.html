@@ -1,0 +1,64 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>8° Questão</title>
+        <link rel="stylesheet" href="ResL4.css">
+
+        <!-- Lista 4 Questão 8
+        Dupla:  Ezequiel Santana e Jônatas Duarte 
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida. -->
+
+        <script>
+            var idades = [];
+            var alturas = [];
+            for (var i = 1; i < 6; i++) {
+                var idade = Number(window.prompt(`Digite a idade da ${i}° pessoa:`));
+                var int = idade % 2;
+                while (isNaN(idade) || idade < 0 || idade > 120 || int != 1 && int != 0) {
+                    window.alert(`Você não digitou um valor válido!`)
+                    var idade = Number(window.prompt(`Digite a idade da ${i}° pessoa:`));
+                }
+                idades.push(idade);
+
+                var altura = Number(window.prompt(`Digite a altura em metros da ${i}° pessoa:`));
+                while (isNaN(altura) || altura < 0 || altura > 2.5) {
+                    window.alert(`Você não digitou um valor válido!`)
+                    var altura = Number(window.prompt(`Digite a altura em metros da ${i}° pessoa:`));
+                }
+                alturas.push(altura);
+            }
+
+            idades.reverse();
+            alturas.reverse();
+
+            window.alert(`As idades digitadas das pessoas foram: ${idades} anos;\nAs alturas digitadas das pessoas foram: ${alturas} metros.`);
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1>8° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL4.html">
+            <input type="button" class="button" value="Voltar">
+        </a>
+
+    </body>
+
+    </html>

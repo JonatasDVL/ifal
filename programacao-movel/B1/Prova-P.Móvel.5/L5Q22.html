@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 22
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Palíndromo. Um palíndromo é uma seqüência de caracteres cuja leitura é idêntica se feita da direita para esquerda ou vice−versa. Por exemplo: OSSO e OVO são palíndromos. Em textos mais complexos os espaços e pontuação são ignorados. A frase SUBI NO ONIBUS é o exemplo de uma frase palíndroma onde os espaços foram ignorados. Faça um programa que leia uma seqüência de caracteres, mostre−a e diga se é um palíndromo ou não.-->
+
+</head>
+
+<body>
+
+    <h1>8° Questão - Strings</h1>
+
+    <script>
+        var frase = String(window.prompt(`Digite uma frase: `));
+        frase = frase.toUpperCase();
+        frase = frase.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+        var quantidadeCaracteres = frase.length;
+        var frase1 = [];
+        var frase2 = [];
+
+        var j = 1;
+        for (var i = 0; i <= quantidadeCaracteres; i++) {
+            var letra = frase.substring(i, j);
+            if (letra != " "){
+                frase1.push(letra);
+                frase2.push(letra);
+            }
+            j++;
+        }
+
+        frase2 = frase2.reverse();
+        
+        var frase1 = frase1.join('');
+        var frase2 = frase2.join('');
+
+        if (frase1 == frase2) {
+            document.write(`${frase1} é um palíndromo.`);
+        } else {
+            document.write(`${frase1} não é um palíndromo.`);
+        }
+
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>12° Questão</title>
+        
+        <!-- Lista 2 Questão 11
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes.
+            Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+                salários até R$ 280,00 (incluindo) : aumento de 20%
+                salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+                salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+                salários de R$ 1500,00 em diante : aumento de 5% 
+                Após o aumento ser realizado, informe na tela:
+                o salário antes do reajuste;
+                o percentual de aumento aplicado;
+                o valor do aumento;
+                o novo salário, após o aumento. -->
+
+        <script>
+            var salário = Number(window.prompt(`Digite o valor do salário de um colaborador:`));  
+
+            // "loop" para comprovar se salário não é um valor inválido
+            var comprovação = salário / 1;
+
+            while(comprovação != salário || salário <= 0){
+                window.alert(`Você digitou um valor inválido!`);
+                var salário = Number(window.prompt(`Digite o valor correto do salário de um colaborador: `)); 
+                var comprovação = salário / 1;
+            }
+
+            // definindo e dizendo qual o novo valor do salário do colaborador
+            if(salário <= 280){
+                var aumento = salário * 20 / 100;
+                var salárioAtual = salário + aumento;
+                window.alert(`o salário antes do reajuste: ${salário} reais;\nO percentual de aumento aplicado: 20%;\nO valor do aumento: ${aumento} reais;\nO novo salário, após o aumento: ${salárioAtual} reais.`);
+            }else if(salário <= 700){
+                var aumento = salário * 15 / 100;
+                var salárioAtual = salário + aumento;
+                window.alert(`o salário antes do reajuste: ${salário} reais;\nO percentual de aumento aplicado: 15%;\nO valor do aumento: ${aumento} reais;\nO novo salário, após o aumento: ${salárioAtual} reais.`);           
+            }else if(salário <= 1500){
+                var aumento = salário * 10 / 100;
+                var salárioAtual = salário + aumento;
+                window.alert(`o salário antes do reajuste: ${salário} reais;\nO percentual de aumento aplicado: 10%;\nO valor do aumento: ${aumento} reais;\nO novo salário, após o aumento: ${salárioAtual} reais.`);           
+            }else{
+                var aumento = salário * 5 / 100;
+                var salárioAtual = salário + aumento;
+                window.alert(`o salário antes do reajuste: ${salário} reais;\nO percentual de aumento aplicado: 5%;\nO valor do aumento: ${aumento} reais;\nO novo salário, após o aumento: ${salárioAtual} reais.`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>11° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

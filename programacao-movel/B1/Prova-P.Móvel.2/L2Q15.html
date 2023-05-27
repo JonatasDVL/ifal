@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>15° Questão</title>
+        
+        <!-- Lista 2 Questão 15
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+            Dicas:
+            Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+            Triângulo Equilátero: três lados iguais;
+            Triângulo Isósceles: quaisquer dois lados iguais;
+            Triângulo Escaleno: três lados diferentes; -->
+
+        <script>
+            var lado1 = Number(window.prompt(`Digite o valor do primeiro lado do triângulo: `)); 
+            var comprovacao1 = lado1 / 1;
+
+            // "loop" para comprovar que 1° lado está conforme os padrões de um triângulo
+            while(lado1 <= 0 || comprovacao1 != lado1){
+                window.alert(`Você digitou um valor inválido, pois o valor do lado de um triângulo não pode ser um número negativo ou neutro!`);
+                var lado1 = Number(window.prompt(`Digite o valor do primeiro lado do triângulo: `));  
+                var comprovacao1 = lado1 / 1;
+            }
+
+            var lado2 = Number(window.prompt(`Digite o valor do segundo lado do triângulo: `));
+            var comprovacao2 = lado2 / 1;
+            
+            // "loop" para comprovar que 2° lado está conforme os padrões de um triângulo
+            while(lado2 <= 0 || comprovacao2 != lado2){
+                window.alert(`Você digitou um valor inválido, pois o valor do lado de um triângulo não pode ser um número negativo ou neutro!`);
+                var lado2 = Number(window.prompt(`Digite o valor do segundo lado do triângulo: `));  
+                var comprovacao2 = lado2 / 1;
+            }
+
+            var lado3 = Number(window.prompt(`Digite o valor do terceiro lado do triângulo: `));
+            var comprovacao3 = lado3 / 1;
+            
+            // "loop" para comprovar que 3° lado está conforme os padrões de um triângulo
+            while(lado3 <= 0 || comprovacao3 != lado3){
+                window.alert(`Você digitou um valor inválido, pois o valor do lado de um triângulo não pode ser um número negativo ou neutro!`);
+                var lado3 = Number(window.prompt(`Digite o valor do segundo lado do triângulo: `));  
+                var comprovacao3 = lado3 / 1;
+            }
+
+            var soma1 = lado1 + lado2;
+            var soma2 = lado1 + lado3;
+            var soma3 = lado2 + lado3;
+
+            // definindo e dizendo que o aluno passou ou não
+            if(soma1 <= lado3 || soma2 <= lado2 || soma3 <= lado1){
+                window.alert(`Os formatos do triângulo está inválido!`);
+            }else if(lado1 == lado2 == lado3){
+                window.alert(`O triângulo formado é equilátero!`);
+            }else if((lado1 == lado2 && lado3 != lado1) || (lado1 == lado3 && lado2 != lado1) || (lado2 == lado3 && lado1 != lado2)){
+                window.alert(`O triângulo formado é isósceles!!`);
+            }else if(lado1 != lado2 != lado3){
+                window.alert(`O triângulo formado é escaleno!`);
+            }else{
+                window.alert(`Valor inválido!`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>15° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

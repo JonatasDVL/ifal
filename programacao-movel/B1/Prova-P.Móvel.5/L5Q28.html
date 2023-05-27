@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 28
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Jogo da palavra embaralhada. Desenvolva um jogo em que o usuário tenha que adivinhar uma palavra que será mostrada com as letras embaralhadas. O programa terá uma lista de palavras lidas de um arquivo texto e escolherá uma aleatoriamente. O jogador terá seis tentativas para adivinhar a palavra. Ao final a palavra deve ser mostrada na tela, informando se o usuário ganhou ou perdeu o jogo.-->
+
+    <script>
+        var palavra = "SAPATO";
+        var forca = ["T","A","P","S","A","O"];
+        var erros = 0;
+
+        while (erros != 6 && tentativa != "SAPATO") {
+            var tentativa = String(window.prompt(`Digite uma palavra: ${forca}`));
+            tentativa = tentativa.toUpperCase();    
+            erros++;
+            if (tentativa != "SAPATO") {
+                window.alert(`Você errou! A palavra não é ${tentativa}.`);
+            }
+        }
+ 
+        if (tentativa == "SAPATO") {
+            window.alert(`Parabéns você Acertou! A palavra é ${palavra}.`);
+        } else {
+            window.alert(`Você perdeu! A palavra era ${palavra}.`);
+        }
+
+    </script>
+    
+</head>
+
+<body>
+
+    <h1>14° Questão - Strings</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

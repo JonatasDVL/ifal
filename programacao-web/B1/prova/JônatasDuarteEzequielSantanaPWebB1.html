@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JônatasDuarte&&EzequielSantana</title>
+  <link rel="stylesheet" href="JônatasDuarteEzequielSantanaPWebB1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <!--
+    IFAL - Disciplina: Programação Web
+    Professor: Italo Arruda
+    Turma: 513
+    Integrantes: Jônatas Duarte e Ezequiel Santana
+    -->
+
+</head>
+
+<body>
+  <div class="container">
+  <h1>Prova de Programação Web no Multiverso do Bootstrap</h1>
+
+  <div class="alert alert-success centro" role="alert">Sejam bem-vindos a prova de Programação Web. Vamos juntos nessa
+    viagem. <span class="badge badge-pill badge-warning">2022</span>
+  </div>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-primary btn-block centro" type="button" data-toggle="collapse"
+            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <a>Vamos começar fazendo login no sistema!</a></button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInputGroup">Usuário</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                  </div>
+                  <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Usuário">
+                </div>
+              </div>
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInputGroup">Senha</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">*</div>
+                  </div>
+                  <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Senha">
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                  <label class="form-check-label" for="autoSizingCheck">Salvar dados
+                  </label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-success mb-2">Logar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-outline-primary btn-block centro" type="button" data-toggle="collapse"
+            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <a>Agora vamos conhecer as melhores disciplinas do curso</a>
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Professor</th>
+                <th scope="col">Serie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Programação Web</th>
+                <td>Italo Arruda</td>
+                <td>3 ano</td>
+              </tr>
+              <tr>
+                <th scope="row">Introdução a Programação</th>
+                <td>Emerson Mamulengo</td>
+                <td>1 ano</td>
+              </tr>
+              <tr>
+                <th scope="row">Programação Móvel</th>
+                <td>Italo Arruda</td>
+                <td>3 ano</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-warning btn-block centro" type="button" data-toggle="collapse"
+            data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+            <a>Por fim, vamos conhecer os talentos de nossa turma!</a>
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="row justify-content-around">
+            <div class="card bg-info centro" style="width: 18rem;">
+              <img src="JônatasDuarte.jpeg" class="card-img-top" alt="Jonatas" width="640px" heigth="640px">
+              <div class="card-body">
+                <h5 class="card-title">Jônatas Duarte</h5>
+                <p class="card-text">Gosta de dormir, mas não tem tempo.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cor Favorita: Azul-Escuro</li>
+                <li class="list-group-item">Inglês: No speak English, but speak Español</li>
+                <li class="list-group-item">Signo: Passa sono com gostinho de fome</li>
+              </ul>
+              <div class="card-body">
+                <a href="www.google.com" class="card-link">Linkedln</a>
+              </div>
+            </div>
+
+            <br>
+            <div class="card bg-danger centro" style="width: 18rem;">
+              <img src="EzequielSantana.jpg" class="card-img-top" alt="Ezequiel">
+              <div class="card-body">
+                <h5 class="card-title">Ezequiel Santana</h5>
+                <p class="card-text">Gosta de Assistir, mas não tem tempo.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cor Favorita: Verde</li>
+                <li class="list-group-item">Inglês: No speak English</li>
+                <li class="list-group-item">Signo: Passa fome e muito sono ahhh</li>
+              </ul>
+              <div class="card-body">
+                <a href="www.google.com" class="card-link">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block centro" type="button" data-toggle="collapse"
+            data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+            <a>E agora a mensagem final!!!</a>
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+          <a id="negrito">Ainda que esteja na merda, tenha fé <a id="rosa">,pois Deus envia anjos.</a></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

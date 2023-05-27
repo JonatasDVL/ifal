@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4° Questão - Funções</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!--Faça um programa, com uma função que necessite de um argumento. A função retorna o valor de caractere ‘P’, se seu argumento for positivo, e ‘N’, se seu argumento for zero ou negativo.-->
+
+    <script>
+        function Função() {
+        var numero = Number(document.getElementById("n1").value);
+        if (numero > 0) {
+            document.getElementById("res").innerHTML =("Ele é positivo!");
+        } else {
+            document.getElementById("res").innerHTML =("Ele é zero ou negativo!");
+        }
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>4° Questão - Funções</h1>
+
+    <p>Adicione um número:</p>
+    <input type="Number" id="n1">
+    
+    <br><br><br><br>
+
+    <p>Clique no butão para efetuar função:</p>
+    <button class="button" onclick="Função()">Butão</button>
+
+    <br><br>
+
+    <p>A soma dos números é: </p>
+    <p id="res"></p>
+
+    <br><br><br><br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

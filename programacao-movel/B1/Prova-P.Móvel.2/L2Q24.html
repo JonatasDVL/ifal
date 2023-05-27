@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>24° Questão</title>
+        
+        <!-- Lista 2 Questão 24
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+            par ou ímpar;
+            positivo ou negativo;
+            inteiro ou decimal. -->
+
+
+        <script>
+            var numero1 = Number(window.prompt(`Digite um número: `));  
+
+            // "loop" para comprovar se o numero é um número
+            while(isNaN(numero1)){
+                window.alert(`Você digitou um valor inválido!`);
+                var numero1 = Number(window.prompt(`Digite um NÚMERO INTEIRO: `));
+            }
+
+            var numero2 = Number(window.prompt(`Digite mais um número: `));  
+
+            // "loop" para comprovar se o numero é um número
+            while(isNaN(numero2)){
+                window.alert(`Você digitou um valor inválido!`);
+                var numero2 = Number(window.prompt(`Digite um NÚMERO INTEIRO: `));
+            }
+            
+            var operacao = String(window.prompt(`Qual operação você deseja realizar entre os números digitados? \nDigite o símbolo da operação que desejas:`));  
+
+            while(operacao != "+" && operacao != "-" && operacao != "*" && operacao != "/" && operacao != "**"){
+                window.alert(`Você digitou um simbolo inválido!`);
+                var operacao = String(window.prompt(`Qual operação você deseja realizar entre os números digitados? \n    Digite o símbolo da operação que desejas:`));  
+            }
+
+            if(operacao == "+"){
+                var resultado = numero1 + numero2;
+            }else if(operacao == "-"){
+                var resultado = numero1 - numero2;
+            }else if(operacao == "*"){
+                var resultado = numero1 * numero2;
+            }else if(operacao == "/"){
+                var resultado = numero1 / numero2;
+            }else if(operacao == "**"){
+                var resultado = numero1 ** numero2;
+            }
+
+            var resto = resultado % 2;
+            
+            // definindo e dizendo se o numero é um número decimal ou inteiro, impar ou par e positivo ou negatio
+            if(resto == 0 && resultado > 0){
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número par, positivo e inteiro!`);
+            }else if(resto == 1 && resultado < 0){
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número par, negativo e inteiro!`);
+            }else if(resto == 1){
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número impar, positivo e inteiro!`);
+            }else if(resto == -1){
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número impar, negativo e inteiro!`);        
+            }else if(resto != 1 && resto != 0 && resto != -1 && resultado > 0){
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número positivo e decimal!`);
+            }else if(resto != 1 && resto != 0 && resto != -1 && resultado < 0){
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número negativo e decimal!`);
+            }else{
+                window.alert(`O resultado da operação: ${numero1} ${operacao} ${numero2} = ${resultado} que é um número par, neutro e inteiro!`);
+            }
+            
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>24° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

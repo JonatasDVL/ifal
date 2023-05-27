@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 25
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Jogo de Forca. Desenvolva um jogo da forca. O programa terá uma lista de palavras lidas de um arquivo texto e escolherá uma aleatoriamente. O jogador poderá errar 6 vezes antes de ser enforcado.
+        Digite uma letra: A
+        -> Você errou pela 1ª vez. Tente de novo!
+
+        Digite uma letra: O
+        A palavra é: _ _ _ _ O
+
+        Digite uma letra: E
+        A palavra é: _ E _ _ O
+
+        Digite uma letra: S
+        -> Você errou pela 2ª vez. Tente de novo!    -->
+
+    <script>
+        var palavra = "SAPATO";
+        var forca = ["_","_","_","_","_","_"];
+        var acertos = 0;
+        var erros = 0;
+        var acerto = 0;
+        var quantidadeLetras = palavra.length;
+        console.log(`${quantidadeLetras}`)
+
+        while (erros != 6 && acertos != quantidadeLetras){
+            var letra1 = String(window.prompt(`Digite uma letra:`));
+            letra1 = letra1.toUpperCase();    
+            var j = 1;
+
+            for(var i = 0; i < quantidadeLetras; i++){
+                var letra2 = palavra.substring(i, j);
+                if(letra1 == letra2){
+                    forca[i] = letra2;
+                    acerto++;  
+                }
+                j++;
+            }
+            
+            if(acerto > 0){
+                acertos+=acerto;  
+                window.alert(`A palavra é: ${forca.join(' ')}`);
+                acerto = 0;
+            }else{
+               erros++; 
+               window.alert(`Você errou pela ${erros}ª vez. Tente de novo!`);
+            }
+        }
+ 
+        if (acertos == quantidadeLetras) {
+            window.alert(`Parabéns você Acertou! A palavra é ${palavra}.`);
+        } else {
+            window.alert(`Você foi enforcado! A palavra era ${palavra}.`);
+        }
+
+    </script>
+    
+</head>
+
+<body>
+
+    <h1>11° Questão - Strings</h1>
+ 
+    <!--<input type="file" onchange="loadFile(this.files[0])">
+
+    <br>
+
+    <p id="txt"></p>-->
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 6
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!--Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene num vetor a média de cada aluno, imprima o número de alunos com média maior ou igual a 7.0.-->
+
+</head>
+
+<body>
+
+    <h1>6° Questão</h1>
+
+    <script>
+        //var medias = []
+        var aprovados = 0;
+        for (var i1 = 1; i1 < 11; i1++) {
+            window.alert(`Adicione as notas do ${i1}° aluno!`);
+            //var notas = [];
+            var soma = 0;
+            for (var i2 = 1; i2 < 5; i2++) {
+                var nota = Number(window.prompt(`Digite a ${i2}° nota:`));
+                while (isNaN(nota) || nota < 0 || nota > 10) {
+                    window.alert(`Você digitou um valor inválido!`)
+                    var nota = Number(window.prompt(`Digite a ${i2}° NOTA:`));
+                }
+                soma += nota;
+                //notas.push(nota)
+            }
+            var media = soma / 4;
+            //medias.push(media);
+            if (media >= 7) {
+                aprovados++;
+            }
+            //document.write(`As 4 notas do ${i1}° aluno foram respectivamente: ${notas} e sua média final foi: ${media} pontos.<br>`);
+        }
+        //document.write(`<br>As médias foram respectivamente: ${medias}`);
+        if (aprovados == 10) {
+            document.write(`Todos os alunos tiveram a média maior ou igual a 7.`);
+        } else if (aprovados == 0) {
+            document.write(`Nenhum aluno tirou a média acima ou igual a 7.`);
+        } else {
+            document.write(`${aprovados} alunos tiveram a média maior ou igual a 7.`);
+        }
+
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

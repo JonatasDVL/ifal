@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>23° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 23
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário. O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos. Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.-->
+
+
+    </head>
+   
+    <body>
+                
+        <body>
+            <h1>23° Questão</h1>
+
+            <p>Número para teste: <input id="n" type="number" /> </p> 
+            
+            <br>
+
+            <button type="button" onclick="primo()">Clique aqui e verifique.</button> 
+            
+            <br>
+
+            <p>Resultado: <div id="res"></div></p> 
+         
+            <script>
+                function primo(){
+                var numero = parseInt(document.getElementById('n').value);
+                var resposta = document.getElementById('res');
+                const primo = [];          
+                var wile = 0;
+                
+                while(numero > 0){
+                    var n2 = numero;
+                    var n3 = 0;
+                    for(n2; n2 >= 1; n2--){
+                        wile++;
+                            if(numero % n2 == 0){
+                                n3++;
+                        }
+                    }
+                    if(n3 <= 2){
+                        primo.push(numero)
+                    }
+                    numero--;    
+                }
+                resposta.innerHTML =`Quantidade de números primos: ${primo}.` + `<br>` + `Foram executadas ${wile} vezes.`;
+                }
+                
+
+            </script>
+                
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html" id="buton1">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

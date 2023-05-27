@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25° Questão</title>
+
+    <!-- Lista 2 Questão 25
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+                "Telefonou para a vítima?"
+                "Esteve no local do crime?"
+                "Mora perto da vítima?"
+                "Devia para a vítima?"
+                "Já trabalhou com a vítima?" 
+            O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente". -->
+
+
+    <script>
+        window.alert(`Responda as futuras perguntas com S(SIM) ou N(NÃO)!`);
+        var resposta1 = String(window.prompt(`Telefonou para a vítima?`));
+
+        // "loop" para comprovar se a resposta está no formato correto
+        while (resposta1 != "S" && resposta1 != "SIM" && resposta1 != "s" && resposta1 != "sim" && resposta1 != "N" && resposta1 != "NÃO" && resposta1 != "n" && resposta1 != "não" && resposta1 != "Sim" && resposta1 != "Não") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            var resposta1 = String(window.prompt(`Responda novamente a pergunta: Telefonou para a vítima?`));
+        }
+
+        var resposta2 = String(window.prompt(`Esteve no local do crime?`));
+
+        // "loop" para comprovar se a resposta está no formato correto
+        while (resposta2 != "S" && resposta2 != "SIM" && resposta2 != "s" && resposta2 != "sim" && resposta2 != "N" && resposta2 != "NÃO" && resposta2 != "n" && resposta2 != "não" && resposta2 != "Sim" && resposta2 != "Não") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            var resposta2 = String(window.prompt(`Responda novamente a pergunta: Esteve no local do crime?`));
+        }
+
+        var resposta3 = String(window.prompt(`Mora perto da vítima`));
+
+        // "loop" para comprovar se a resposta está no formato correto
+        while (resposta3 != "S" && resposta3 != "SIM" && resposta3 != "s" && resposta3 != "sim" && resposta3 != "N" && resposta3 != "NÃO" && resposta3 != "n" && resposta3 != "não" && resposta3 != "Sim" && resposta3 != "Não") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            var resposta3 = String(window.prompt(`Responda novamente a pergunta: Mora perto da vítima?`));
+        }
+
+        var resposta4 = String(window.prompt(`Devia para a vítima?`));
+
+        // "loop" para comprovar se a resposta está no formato correto
+        while (resposta4 != "S" && resposta4 != "SIM" && resposta4 != "s" && resposta4 != "sim" && resposta4 != "N" && resposta4 != "NÃO" && resposta4 != "n" && resposta4 != "não" && resposta4 != "Sim" && resposta4 != "Não") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            var resposta4 = String(window.prompt(`Responda novamente a pergunta: Devia para a vítima?`));
+        }
+
+        var resposta5 = String(window.prompt(`Já trabalhou com a vítima?`));
+
+        // "loop" para comprovar se a resposta está no formato correto
+        while (resposta5 != "S" && resposta5 != "SIM" && resposta5 != "s" && resposta5 != "sim" && resposta5 != "N" && resposta5 != "NÃO" && resposta5 != "n" && resposta5 != "não" && resposta5 != "Sim" && resposta5 != "Não") {
+            window.alert(`Você digitou um valor inválido, pois você deve digitar S(SIM) ou N(NÃO)!`);
+            var resposta5 = String(window.prompt(`Responda novamente a pergunta: Já trabalhou com a vítima?`));
+        }
+
+
+        if (resposta1 == "S" || resposta1 == "SIM" || resposta1 == "s" || resposta1 == "sim" || resposta1 == "Sim") {
+            var resposta1 = 1;
+        } else {
+            var resposta1 = 0;
+        }
+
+        if (resposta2 == "S" || resposta2 == "SIM" || resposta2 == "s" || resposta2 == "sim" || resposta2 == "Sim") {
+            var resposta2 = 1;
+        } else {
+            var resposta2 = 0;
+        }
+
+        if (resposta3 == "S" || resposta3 == "SIM" || resposta3 == "s" || resposta3 == "sim" || resposta3 == "Sim") {
+            var resposta3 = 1;
+        } else {
+            var resposta3 = 0;
+        }
+
+        if (resposta4 == "S" || resposta4 == "SIM" || resposta4 == "s" || resposta4 == "sim" || resposta4 == "Sim") {
+            var resposta4 = 1;
+        } else {
+            var resposta4 = 0;
+        }
+
+        if (resposta5 == "S" || resposta5 == "SIM" || resposta5 == "s" || resposta5 == "sim" || resposta5 == "Sim") {
+            var resposta5 = 1;
+        } else {
+            var resposta5 = 0;
+        }
+
+        var resultado = resposta1 + resposta2 + resposta3 + resposta4 + resposta5;
+
+        // definindo e dizendo se a pessoa deve ser classificada como "Suspeita"(2), "Cúmplice"(3 ou 4) e "Assassino"(5 questões). Caso contrário, ele será classificado como "Inocente"(1 ou 0).
+        if (resultado == 5) {
+            window.alert(`A pessoa é um assassino!`);
+        } else if (resultado == 4 || resultado == 3) {
+            window.alert(`A pessoa é um cúmplice!`);
+        } else if (resultado == 2) {
+            window.alert(`A pessoa é um suspeito!`);
+        } else {
+            window.alert(`A pessoa é um inocente!`);
+        }
+
+
+    </script>
+
+    <style>
+        body {
+            background-color: rgb(20, 20, 20);
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 1px rgb(20, 20, 20);
+            font-family: helvetica, arial, sans-serif;
+
+        }
+
+        .button {
+            color: white;
+            padding: 8px 15px;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            background-color: #252525;
+        }
+    </style>
+</head>
+
+<body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+
+    <h1>25° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL2.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

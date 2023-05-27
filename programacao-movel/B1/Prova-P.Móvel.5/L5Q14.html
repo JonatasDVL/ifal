@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>14° Questão - Funções</title>
+	<link rel="stylesheet" href="ResL5.css">
+
+	<!-- Lista 5 Questão 14
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+	<!-- Embaralha palavra. Construa uma função que receba uma string como parâmetro e devolva outra string com os carateres embaralhados. Por exemplo: se função receber a palavra python, pode retornar npthyo, ophtyn ou qualquer outra combinação possível, de forma aleatória. Padronize em sua função que todos os caracteres serão devolvidos em caixa alta ou caixa baixa, independentemente de como foram digitados.-->
+
+	<script>
+		function embaralhar(palavra) {
+			// Loop em todos os elementos
+			for (let i = palavra.length - 1; i > 0; i--) {
+            // Escolhendo elemento aleatório
+        	const j = Math.floor(Math.random() * (i + 1));
+        	// Reposicionando elemento
+        	[palavra[i], palavra[j]] = [palavra[j], palavra[i]];
+    }
+			return palavra;
+		}
+
+		var palavra = String(window.prompt(`Digite uma palavra:`));
+		palavra = palavra.split("");
+		palavra = embaralhar(palavra);
+		palavra = palavra.join("");
+		window.alert(`Palavra embaralhada: ${palavra}.`);
+
+	</script>
+
+</head>
+
+<body>
+
+	<h1>14° Questão - Funções</h1>
+
+
+	<br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+	<h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+	<a href="ResL5.html">
+		<input type="button" class="button" value="Voltar">
+	</a>
+
+</body>

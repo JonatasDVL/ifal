@@ -1,0 +1,204 @@
+/*Index*/
+
+.tg-0 {
+    color: lime;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.tg-0l {
+    color: brown;
+    font-style: oblique;
+    text-decoration: line-through;
+    font-size: 26px;
+}
+
+.foto {
+    height: 300px;
+}
+
+table:hover {
+    zoom: 100%;
+
+}
+
+#zoom:active {
+    zoom: 150%;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+#caminho {
+    justify-content: start;
+
+}
+
+#volta {
+    justify-content: end;
+}
+
+/*Sumário*/
+
+#sumario {
+    margin: 1px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Capitulos */
+.capitulos:hover {
+    color: darkgreen;
+}
+
+.capitulos:active {
+    color: black;
+}
+
+.subCapitulos:hover {
+    color: darkgreen;
+}
+
+.subCapitulos:active {
+    color: black;
+}
+
+.subsub:hover {
+    color: black;
+}
+
+.subsub:active {
+    color: black;
+}
+
+.sub:hover {
+    color: goldenrod;
+}
+
+.sub:active {
+    color: violet;
+}
+
+.toast1 {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 50px;
+    height: 20px;
+}
+
+.toast2 {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 10px 10px 7px;
+
+}
+
+/*Livro*/
+
+#bot2 {
+    margin: 10px 10px 10px 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+}
+
+#acord1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-body {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.coll1 {
+    font-style: normal;
+    text-decoration: none;
+
+}
+
+/*Formulário*/
+
+fieldset {
+    background-color: #eeeeee;
+    display: flex;
+}
+
+legend {
+    background-color: #eeeeee;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.col-2,
+.col-4,
+.col-6,
+.col-12 {
+    padding: 5px;
+}
+
+label {
+    margin: 0%;
+}
+
+fieldset.PBorda {
+    border: solid 1px grey !important;
+    padding: 0px 10px 0px 10px;
+    border-bottom: none;
+}
+
+legend.PBorda {
+    width: auto !important;
+    border: none;
+    font-size: 20px;
+}
+
+input {
+    margin: 0px 10px 10px 0px;
+}
+
+#formulario {
+    background-color: #eeeeee;
+    margin: 1px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#numeroPis {
+    margin-right: 100px;
+}
+
+#registroNacionalEstrangeiro {
+    justify-content: space-between;
+}
+
+#ric {
+    justify-content: space-between;
+}
+
+#carteiraHabilitação {
+    justify-content: space-between;
+}
+
+#assinaturaDigital {
+    padding: 8px 15px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#assinatura {
+    border-color: rgb(146, 8, 146);
+    border-style: solid;
+    width: 55%;
+}

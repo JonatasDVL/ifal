@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(20, 20, 20);
+
+}
+
+h1{
+    color: cadetblue;
+    font-family: arial;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.button {
+    color: white;
+    padding: 8px 15px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: #252525;    
+}
+
+.input {
+    color: #252525;
+    background-color: white;    
+
+}

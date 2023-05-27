@@ -1,0 +1,55 @@
+body{
+    background-color: gray;
+
+}
+
+h1{
+    color: lightblue;
+    font-family: arial;
+    text-align: center;
+}
+
+#senha{
+    padding-left: 50px;
+    color: purple;
+    text-decoration: underline;
+}
+
+#sexo{
+    padding-left: 50px;
+    color: purple;
+}
+
+#estado{
+    padding-left: 50px;
+    color: purple;
+}
+
+#nome{
+    font-weight: bold;
+}
+
+#email{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#m{
+    color:blue;
+}
+
+#f{
+    color: red;
+}
+
+.button {
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: black    
+}
+
+.input {
+    background-color: white;    
+}

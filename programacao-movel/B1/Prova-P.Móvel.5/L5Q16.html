@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 16
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Nome ao contrário em maiúsculas. Faça um programa que permita ao usuário digitar o seu nome e em seguida mostre o nome do usuário de trás para frente utilizando somente letras maiúsculas. Dica: lembre−se que ao informar o nome o usuário pode digitar letras maiúsculas ou minúsculas.-->
+
+
+    <script>
+        function reverse(n) {
+            return n.split("").reverse().join("");
+        }
+
+        var nome = window.prompt(String(`Digite seu nome:`));
+        nome = nome.toUpperCase();
+        nome = reverse(nome);
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>2° Questão - Strings</h1>
+
+    <script>
+        document.write(`Nome do usuário de trás para frente e em letras maiúsculas: ${nome}`);
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

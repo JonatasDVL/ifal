@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>11° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 11
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!--Altere o programa anterior para mostrar no final a soma dos números.-->
+
+    </head>
+   
+    <body>
+                
+        <h1>11° Questão</h1>
+        <h2></h2>
+        <script>
+            var n1 = Number(window.prompt(`Digite um número inteiro:`));
+            var comprovacao1 = n1 % 2;
+            while(isNaN(n1) || comprovacao1 != 0  && comprovacao1 != 1){
+                    window.alert(`Você digitou um valor errado!`);
+                    var n1 = Number(window.prompt(`Digite um número inteiro:`));
+                    var comprovacao1 = n1 % 2;
+                }
+            
+            var n2 = Number(window.prompt(`Digite mais um número inteiro:`));
+            var comprovacao2 = n2 % 2;
+            while(isNaN(n2)){
+                    window.alert(`Você digitou um valor errado!`);
+                    var n2 = Number(window.prompt(`Digite um número inteiro:`));
+                    var comprovacao2 = n2 % 2;
+                }
+                
+            if(n1 > n2){
+                var n3 = n2;
+                var n2 = n1;
+                var n1 = n3;
+            }    
+
+            var n4 = n1;
+            var n5 = n2;
+
+            var soma = 0;
+
+                if(comprovacao1 == 1 && comprovacao2 == 1){
+                    while(n2 != n1){
+                        var soma = soma + n2;
+                        var n2 = n2 - 2 
+                    }
+                }else if(comprovacao1 == 0 && comprovacao2 == 0){
+                    var n1 = n1 - 1;
+                    var n2 = n2 - 1;
+                    while(n2 != n1){
+                        var soma = soma + n2;
+                        var n2 = n2 - 2;
+                    }
+                }else if(comprovacao1 == 0 && comprovacao2 == 1){
+                    var n1 = n1 - 1;
+                    while(n2 != n1){
+                        var soma = soma + n2;
+                        var n2 = n2 - 2;
+                    }
+                }else if(comprovacao1 == 1 && comprovacao2 == 0){
+                    var n2 = n2 - 1;
+                    while(n2 != n1){
+                        var soma = soma + n2;
+                        var n2 = n2 - 2;
+                    }
+                }
+                document.write(`A soma de todos os números impares entre ${n4} e ${n5}: ${soma}`);
+ 
+        </script>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

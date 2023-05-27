@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21° Questão</title>
+    <link rel="stylesheet" href="ResL3.css">
+
+    <!-- Lista 3 Questão 21
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.-->
+
+</head>
+
+<body>
+
+    <body>
+        <h1>21° Questão</h1>
+
+        <p>Número para teste: <input id="nu" type="number" /> </p>
+
+        <br>
+
+        <button type="button" onclick="primo()">Clique aqui e verifique.</button>
+
+        <br>
+
+        <p>Resultado: </p>
+        <div id="res">
+
+            <script>
+                function primo() {
+                    var numero = parseInt(document.getElementById('nu').value);
+                    var resposta = document.getElementById('res');
+                    var divisores = 0;
+
+                    for (var count = 1; count <= numero; count++)
+                        if (numero % count == 0)
+                            divisores++;
+
+                    if (divisores == 2) {
+                        resposta.innerHTML = 'É um número primo.';
+                    } else {
+                        resposta.innerHTML = 'Não é um número primo.';
+                    }
+                }
+
+            </script>
+
+        </div>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html" id="buton1">
+            <input type="button" class="button" value="Voltar">
+        </a>
+
+    </body>
+
+</html>

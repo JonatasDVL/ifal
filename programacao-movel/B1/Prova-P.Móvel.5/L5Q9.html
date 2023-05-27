@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>9° Questão - Funções</title>
+	<link rel="stylesheet" href="ResL5.css">
+
+	<!-- Lista 5 Questão 9
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+	<!-- Reverso do número. Faça uma função que retorne o reverso de um número inteiro informado. Por exemplo: 127 -> 721.-->
+
+	<script>
+		function reverse(numero) {
+			return numero.split("").reverse().join("");
+		}
+
+		var numero = Number(window.prompt(`Digite um número inteiro:`));
+		var inteiro = numero % 2;
+		while(inteiro != 1 && inteiro != 0){
+			window.alert(`Você digitou um valor inválido:`);
+			numero = Number(window.prompt(`Digite um número inteiro:`));
+			inteiro = numero % 2;
+		}
+		
+		numero = numero + "";
+		numero = reverse(numero);
+		window.alert(`Número invertido: ${numero}`);
+
+	</script>
+
+</head>
+
+<body>
+
+	<h1>9° Questão - Funções</h1>
+
+
+	<br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+	<h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+	<a href="ResL5.html">
+		<input type="button" class="button" value="Voltar">
+	</a>
+
+</body>

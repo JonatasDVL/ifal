@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>14° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 14
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números impares.-->
+
+
+        <script>
+            var neutros = 0;
+            var numero1 = Number(window.prompt(`Digite um número inteiro: `));  
+            var comprovacao = numero1 % 2;
+
+            while(isNaN(numero1) || comprovacao != 1 && comprovacao != 0){
+                    window.alert(`Número digitado é um valor inválido!`);
+                    var numero1 = Number(window.prompt(`Digite um número inteiro: `));  
+                    var comprovacao = numero1 % 2;
+            }if(numero1 == 0){
+                neutros++;
+            }
+
+            var numero2 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero2 % 2;
+
+            while(isNaN(numero2) || comprovacao != 1 && comprovacao != 0){
+                window.alert(`Número digitado é um valor inválido!`);
+                var numero2 = Number(window.prompt(`Digite mais um número inteiro: `));  
+                var comprovacao = numero2 % 2;
+            }if(numero2 == 0){
+                neutros++;
+            }
+
+            var numero3 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero3 % 2;
+
+            while(isNaN(numero3) || comprovacao != 1 && comprovacao != 0){
+                    window.alert(`Número digitado é um valor inválido!`);
+                    var numero3 = Number(window.prompt(`Digite mais um número inteiro: `)); 
+                    var comprovacao = numero3 % 2; 
+            }if(numero3 == 0){
+                neutros++;
+            }
+
+            var numero4 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero4 % 2;
+
+            while(isNaN(numero4) || comprovacao != 1 && comprovacao != 0){
+                window.alert(`Número digitado é um valor inválido!`);
+                var numero4 = Number(window.prompt(`Digite mais um número inteiro: `));
+                var comprovacao = numero4 % 2;
+  
+            }if(numero4 == 0){
+                neutros++;
+            }
+
+            var numero5 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero5 % 2;
+
+            while(isNaN(numero5) || comprovacao != 1 && comprovacao != 0){
+                    window.alert(`Número digitado é um valor inválido!`);
+                    var numero5 = Number(window.prompt(`Digite mais um número inteiro: `)); 
+                    var comprovacao = numero5 % 2;
+            }if(numero5 == 0){
+                neutros++;
+            }
+
+            var numero6 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero6 % 2;
+
+            while(isNaN(numero6) || comprovacao != 1 && comprovacao != 0){
+                window.alert(`Número digitado é um valor inválido!`);
+                var numero6 = Number(window.prompt(`Digite mais um número inteiro: `));
+                var comprovacao = numero6 % 2;  
+            }if(numero6 == 0){
+                neutros++;
+            }
+
+            var numero7 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero7 % 2;
+
+            while(isNaN(numero7) || comprovacao != 1 && comprovacao != 0){
+                    window.alert(`Número digitado é um valor inválido!`);
+                    var numero7 = Number(window.prompt(`Digite mais um número inteiro: `));  
+                    var comprovacao = numero7 % 2;
+            }if(numero7 == 0){
+                neutros++;
+            }
+
+            var numero8 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero8 % 2;
+
+            while(isNaN(numero8) || comprovacao != 1 && comprovacao != 0){
+                window.alert(`Número digitado é um valor inválido!`);
+                var numero8 = Number(window.prompt(`Digite mais um número inteiro: `)); 
+                var comprovacao = numero8 % 2; 
+            }if(numero8 == 0){
+                neutros++;
+            }
+
+            var numero9 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero9 % 2;
+
+            while(isNaN(numero9) || comprovacao != 1 && comprovacao != 0){
+                    window.alert(`Número digitado é um valor inválido!`);
+                    var numero9 = Number(window.prompt(`Digite mais um número inteiro: `));  
+                    var comprovacao = numero9 % 2;
+            }if(numero9 == 0){
+                neutros++;
+            }
+
+            var numero10 = Number(window.prompt(`Digite mais um número inteiro: `));  
+            var comprovacao = numero10 % 2;
+
+            while(isNaN(numero10) || comprovacao != 1 && comprovacao != 0){
+                window.alert(`Número digitado é um valor inválido!`);
+                var numero10 = Number(window.prompt(`Digite mais um número inteiro: `));  
+                var comprovacao = numero10 % 2;
+            }if(numero10 == 0){
+                neutros++;
+            }
+
+            var resto1 = numero1 % 2;
+            var resto2 = numero2 % 2;
+            var resto3 = numero3 % 2;
+            var resto4 = numero4 % 2;
+            var resto5 = numero5 % 2;
+            var resto6 = numero6 % 2;
+            var resto7 = numero7 % 2;
+            var resto8 = numero8 % 2;
+            var resto9 = numero9 % 2;
+            var resto10 = numero10 % 2;
+
+            var impares = resto1 + resto2 + resto3 + resto4 + resto5 + resto6 + resto7 + resto8 + resto9 + resto10;
+            var pares = 10 - impares - neutros;
+
+            if(impares > 1 && pares > 1 && neutros > 1){
+                window.alert(`Dos números digitados: ${impares} números foram impares, ${pares} números foram pares e ${neutros} números foram neutros.`);
+    
+            }else if(impares == 10){
+                window.alert(`Todos os números digitados foram impares.`);
+            }else if(pares == 10){
+                window.alert(`Todos os números digitados foram pares.`);
+            }else if(neutros == 10){
+                window.alert(`Todos os números digitados foram neutros.`);
+
+            }else if(impares == 8 && pares == 1 && neutros == 1){
+                window.alert(`Dos números digitados: 8 números foram impares, 1 número foi par e 1 número foi neutro.`);
+            }else if(impares == 1 && pares == 8 && neutros == 1){
+                window.alert(`Dos números digitados: 1 número foi impar, 8 números foram pares e 1 número foi neutro.`);
+            }else if(impares == 1 && pares == 1 && neutros == 8){
+                window.alert(`Dos números digitados: 1 número foi impar, 1 número foi par e 8 números foram neutros.`);
+
+            }else if(impares > 1 && pares > 1 && neutros == 1){
+                window.alert(`Dos números digitados: ${impares} números foram impares, ${pares} números foram pares e 1 número foi neutro.`);
+            }else if(impares > 1 && pares == 1 && neutros > 1){
+                window.alert(`Dos números digitados: ${impares} números foram impares, 1 número foi par e ${neutros} números foram neutros.`);
+            }else if(impares == 1 && pares > 1 && neutros > 1){
+                window.alert(`Dos números digitados: 1 números foi impar, ${pares} foram números pares e ${neutros} número foi neutros.`);
+                            
+            }else if(impares == 9 && pares == 1 && neutros == 0){
+                window.alert(`Dos números digitados: 9 números foram impares e 1 número foi par.`);
+            }else if(impares == 1 && pares == 9 && neutros == 0){
+                window.alert(`Dos números digitados: 1 número foi impar e 9 números foram pares.`);
+            }else if(impares > 1 && pares > 1 && neutros == 0){
+                window.alert(`Dos números digitados: ${impares} números foram impares ${pares} números foram pares.`);
+            }else if(impares == 9 && pares == 0 && neutros == 1){
+                window.alert(`Dos números digitados: 9 números foram impares e 1 número foi neutros.`);
+            }else if(impares == 1 && pares == 0 && neutros == 9){
+                window.alert(`Dos números digitados: 1 número foi impar e 9 números foram neutros.`);
+            }else if(impares > 1 && pares == 0 && neutros > 1){
+                window.alert(`Dos números digitados: ${impares} números foram impares ${neutros} números foram neutros.`);
+            }else if(impares == 0 && pares == 9 && neutros == 1){
+                window.alert(`Dos números digitados: 9 números foram pares e 1 número foi neutro.`);
+            }else if(impares == 0 && pares == 1 && neutros == 9){
+                window.alert(`Dos números digitados: 1 número foi par e 9 números foram neutros.`);
+            }else if(impares == 0 && pares > 1 && neutros > 1){
+                window.alert(`Dos números digitados: ${pares} números foram pares e ${neutros} números foram neutros.`);
+            
+            }else{
+                window.alert("bug");
+            }
+            
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>14° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

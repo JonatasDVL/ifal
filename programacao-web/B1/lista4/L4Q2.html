@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Questão 02</title>
+	<link rel="stylesheet" href="ResL4.css">
+
+	<!-- Lista 3 Questão 2
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Web 
+        Turma: 513 -->
+
+	<!-- Criar uma página com o layout abaixo.-->
+
+	<style>
+		table {
+			margin: auto;
+		}
+
+		#td1 {
+			text-align: center;
+			font-weight: bold;
+		}
+
+		#input1 {
+			height: 50px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<form>
+		<table width="500" cellpadding="1" cellspacing="1" border="1">
+			<tr>
+				<td id="td1" colspan="3">Pizza Shop 2.0</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input name="nome" type="text" id="name"></td>
+			</tr>
+
+			<tr>
+				<td>Pizza Topping</td>
+				<td>
+					<input type="radio" name="topping" id="topping" value="0">&nbsp;Supreme
+					<br>
+					<input type="radio" name="topping" id="topping" value="1">&nbsp;Vegetarian
+					<br>
+					<input type="radio" name="topping" id="topping" value="2">&nbsp;Hawaiian
+				</td>
+			</tr>
+
+			<tr>
+				<td>Pizza Sauce</td>
+				<td>
+					<select name="molho" id="sauce">
+						<option>Tomato</option>
+						<option>N/D</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Optional Extras</td>
+				<td>
+					<input type="checkbox" name="topping" id="topping" value="0">&nbsp;Extra Cheese
+					<input type="checkbox" name="topping" id="topping" value="1">&nbsp;Gluten Free Base
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">Delivery Instructions:
+					<br>
+					<input type="text" name="topping" id="input1" size="65" rows="3">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="3"><input type="reset" name="Send my Order" id="Send" value="Send my Order"></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<br><br><br><br><br> <br><br><br><br><br>
+
+	<hr>
+
+	<h4 id="voltar">Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+	<a href="ResL4.html">
+		<input type="button" class="button" value="Voltar">
+	</a>
+
+</body>
+
+</html>

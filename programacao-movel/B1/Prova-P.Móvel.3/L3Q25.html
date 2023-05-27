@@ -1,0 +1,84 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>25° Questão</title>
+            <link rel="stylesheet" href="ResL3.css">
+            
+            <!-- Lista 3 Questão 25
+            Dupla:  Ezequiel Santana e Jônatas Duarte 
+            Prof: Italo Rodrigo da Silva Arruda
+            Disciplina: Programação Móvel 
+            Turma: 513
+            -->
+    
+            <!-- Faça um programa que peça para n pessoas a sua idade, ao final o programa devera verificar se a média de idade da turma varia entre 0 e 25,26 e 60 e maior que 60; e então, dizer se a turma é jovem, adulta ou idosa, conforme a média calculada. -->
+    
+    
+            <script>    
+                var idade1 = Number(window.prompt(`Digite a idade de uma pessoa da turma:`));
+                    while(isNaN(idade1) || idade1 < 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var idade1 = Number(window.prompt(`Digite a idade de uma pessoa da turma:`));
+                    }
+    
+                var idade2 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`)); 
+                    while(isNaN(idade2) || idade2 < 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var idade2 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`)); 
+                    }
+    
+                var idade3 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`));
+                    while(isNaN(idade3) || idade3 < 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var idade3 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`));
+                    }
+    
+                var idade4 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`)); 
+                    while(isNaN(idade4) || idade4 < 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var idade4 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`)); 
+                    }
+    
+                var idade5 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`));
+                    while(isNaN(idade5) || idade5 < 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var idade5 = Number(window.prompt(`Digite a idade de outra pessoa da turma:`));
+                    }
+    
+                var media = (idade1 + idade2 + idade3 + idade4 + idade5) / 5;
+            
+            </script>
+    
+        </head>
+       
+        <body>
+                    
+            <h1>25° Questão</h1>
+            <br>
+    
+            <script> 
+    
+                if(media <= 25){
+                    document.write(`A média de idade da turma foi de ${media} anos, ou seja, é uma turma jovem.`)
+                }else if(media >= 26 && media < 60){
+                    document.write(`A média de idade da turma foi de ${media} anos, ou seja, é uma turma adulta.`)
+                }else{
+                    document.write(`A média de idade da turma foi de ${media} anos, ou seja, é uma turma idosa.`)
+                }
+            </script>
+    
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>  
+    
+    
+            <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+    
+            <a href="ResL3.html">
+                <input type="button" class="button" value="Voltar">
+                </a>
+    
+        </body>
+            
+    </html>

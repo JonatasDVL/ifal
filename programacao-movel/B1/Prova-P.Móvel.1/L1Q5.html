@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>5° Questão</title>
+        
+        <!-- Lista 1 Questão 5 
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+       
+        <!-- Faça um Programa que converta metros para centímetros.-->
+        
+        <script>
+            var metros = Number(window.prompt(`Digite um valor em metros:`));
+            var centimetros = metros*100;
+
+            if(metros == 1){
+                window.alert(`${metros} metro é igual a ${centimetros} centímetros.`);
+            } else if(metros != 1){
+                window.alert(`${metros} metros é igual a ${centimetros} centímetros.`);
+            }
+            
+            function FuncaoMostre() {
+                if(metros == 1){
+                    window.alert(`${metros} metro é igual a ${centimetros} centímetros.`);
+                } else if(metros != 1){
+                    window.alert(`${metros} metros é igual a ${centimetros} centímetros.`);
+                }
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 0 0 15px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+        
+        <h1>5° Questão</h1>
+
+        <h4>Clique no butão [Mostre-me] para que o programa mostre o resultado novamente.</h4>
+        
+        <button class="button" onclick="FuncaoMostre()">Mostre-me</button>
+    
+        <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL1.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+            <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL1.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+            
+    </body>
+
+</html>

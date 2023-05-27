@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>5° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 5
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.-->
+
+
+        <script>
+            var populacaoA = Number(window.prompt(`Digite o valor da população do país A:`));  
+            while(isNaN(populacaoA) || populacaoA < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var populacaoA = Number(window.prompt(`Digite o valor da população do país A:`));
+            }
+
+            var populacaoB = Number(window.prompt(`Digite o valor da população do país B:`));
+            while(isNaN(populacaoB) || populacaoB < 0){
+                window.alert(`Você digitou um valor errado!`);
+                var populacaoB = Number(window.prompt(`Digite o valor da população do país B:`));
+            }
+
+            var taxaA = Number(window.prompt(`Digite o valor da taxa de crescimento do país A:`));
+            while(isNaN(taxaA)){
+                window.alert(`Você digitou um valor errado!`);
+                var taxaA = Number(window.prompt(`Digite o valor da taxa de crescimento do país A:`));
+            }
+
+            var taxaB = Number(window.prompt(`Digite o valor da taxa de crescimento do país B:`));
+            while(isNaN(taxaB)){
+                window.alert(`Você digitou um valor errado!`);
+                var taxaB = Number(window.prompt(`Digite o valor da taxa de crescimento do país B:`));
+            }
+
+            var anos = 0;
+
+            if(populacaoA <= populacaoB && taxaA > taxaB){
+                while(populacaoA < populacaoB){
+                    var populacaoA = populacaoA + populacaoA * (taxaA / 100) ;  
+                    var populacaoB = populacaoB + populacaoB * (taxaB /100);  
+                    anos++;
+                }
+                var anos = anos + 1;
+                if(populacaoA > populacaoB){
+                    window.alert(`Será necessário ${anos} anos para a população do país A ultrapasse a população do país B!`);
+                }else{
+                    window.alert(`Será necessário ${anos} anos para a população do país A iguale a população do país B!`);
+                }
+                
+            }else if(populacaoA >= populacaoB && taxaA < taxaB){
+                while(populacaoA > populacaoB){
+                    var populacaoA = populacaoA + populacaoA * (taxaA / 100) ;  
+                    var populacaoB = populacaoB + populacaoB * (taxaB /100);  
+                    anos++;
+                }
+                var anos = anos + 1;
+                if(populacaoA < populacaoB){
+                    window.alert(`Será necessário ${anos} anos para a população do país B ultrapasse a população do país A!`); 
+                }else{
+                    window.alert(`Será necessário ${anos} anos para a população do país B iguale a população do país A!`);
+                }
+
+            }else{
+                if (populacaoA > populacaoB && taxaA > taxaB){
+                    window.alert(`A população do país B não irá ultrapassar a população do país A!`);
+                }else if (populacaoA < populacaoB && taxaA < taxaB){
+                    window.alert(`A população do país A não irá ultrapassar a população do país B!`);
+                }else{
+                    window.alert(`As populações e taxas de crescimento dos países A e B são identicas, logo nenhuma das populações irá ultrapassar a outra!`);
+                }
+            }
+            
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>5° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

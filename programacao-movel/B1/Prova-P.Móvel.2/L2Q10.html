@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10° Questão</title>
+        
+        <!-- Lista 2 Questão 10
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso. -->
+
+        <script>
+            var turno = String(window.prompt(`Digite a letra "M" de matutino se estiver de manhã, digite a letra "V" de verpertino se estiver de tarde e digite a letra "N" de nortuno se estiver de noite:`));  
+
+            // "loop" para comprovar se turno é não tem um valor invalido inválido
+            while(turno != "M" && turno != "V" && turno != "N" && turno != "m" && turno != "v" && turno != "n" ){
+                window.alert(`Você digitou um valor inválido!`);
+                var turno = String(window.prompt(`Digite a letra "M" de matutino se estiver de manhã, digite a letra "V" de verpertino se estiver de tarde e digite a letra "N" de nortuno se estiver de noite `)); 
+            }
+
+            // definindo e dizendo qual comprimento o programa dirá
+            if(turno == "M" || turno == "m"){
+                window.alert(`Bom dia!`);
+            }else if(turno == "V" || turno == "v"){
+                window.alert(`Boa tarde!`);
+            }else if(turno == "N" || turno == "n"){
+                window.alert(`Boa noite!`);
+            }else{
+                window.alert(`Valor Inválido!!`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>10° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

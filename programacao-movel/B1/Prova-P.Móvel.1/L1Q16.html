@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>16° Questão</title>
+
+        <!-- Lista 1 Questão 16 
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+        
+        <!-- O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura 
+            da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que 
+            custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total. -->
+        
+        <script>
+
+            var metros = Number(window.prompt(`Digite o valor em metros quadrados da área que será pintado:`));  
+            
+            while(metros < 0){                
+                window.alert(`O valor em metros quadrados da área que será pintado não pode ser um número negativo.`);
+                var metros = Number(window.prompt(`Digite o valor em metros quadrados da área que será pintado:`));  
+
+            }
+            
+            if((metros % (6 * 18)) == 0){
+                var quantidadeDeLatas = (metros / 6) / 18;
+            }else{
+                var quantidadeDeLatas = Math.floor((metros / 6) / 18) + 1;
+            }
+            
+            var preçoTotal = (quantidadeDeLatas * 80).toFixed(2);
+
+            if((metros % (6 * 18)) == 0){
+                var quantidadeDeGalões = (metros / 6) / 3.6;
+            }else{
+                var quantidadeDeGalões = Math.floor((metros / 6) / 3.6) + 1;
+            }
+            
+            var preçoTotal2 = (quantidadeDeGalões * 25).toFixed(2);
+
+            window.alert(`Caso compre a tinta em latas, será necessario comprar ${quantidadeDeLatas} latas de tinta e o preço total da compra será de ${preçoTotal} reais.
+            \nCaso compre a tinta em galões, será necessario comprar ${quantidadeDeGalões} latas de tinta e o preço total da compra será de ${preçoTotal2} reais.`);      
+     
+            function FuncaoMostre() {
+                window.alert(`Será necessario comprar ${quantidadeDeLatas} latas de tinta; \nO preço total da compra será de ${preçoTotal} reais.`);                           
+            }
+   
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                font-family: helvetica, arial, sans-serif;
+                text-shadow: 0 0 15px rgb(20, 20, 20);
+
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+
+        <h1>16° Questão</h1>
+       
+        <h4>Clique no butão [Mostre-me] para que o programa mostre o resultado novamente.</h4>
+        
+        <button class="button" onclick="FuncaoMostre()">Mostre-me</button>
+
+        <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL1.html"><input type="button" class="button" value="Voltar"></a>
+            
+    </body>
+
+</html>

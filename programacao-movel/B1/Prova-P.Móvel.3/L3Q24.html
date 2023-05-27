@@ -1,0 +1,82 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>25° Questão</title>
+            <link rel="stylesheet" href="ResL3.css">
+            
+            <!-- Lista 3 Questão 25
+            Dupla:  Ezequiel Santana e Jônatas Duarte 
+            Prof: Italo Rodrigo da Silva Arruda
+            Disciplina: Programação Móvel 
+            Turma: 513
+            -->
+    
+            <!-- Faça um programa que calcule o mostre a média aritmética de N notas. -->
+    
+    
+            <script>    
+                var nota1 = Number(window.prompt(`Digite a primeira nota:`));
+                while(isNaN(nota1) || nota1 < 0 || nota1 > 10 ){
+                    window.alert(`Você digitou um valor errado!`);
+                    var nota1 = Number(window.prompt(`Digite a primeira nota:`));
+                }
+                
+                var nota2 = Number(window.prompt(`Digite a segunda nota:`));
+                while(isNaN(nota2) || nota2 < 0 || nota2 > 10 ){
+                    window.alert(`Você digitou um valor errado!`);
+                    var nota2 = Number(window.prompt(`Digite a segunda nota:`));
+                }
+
+                var nota3 = Number(window.prompt(`Digite a terceira nota:`));
+                    while(isNaN(nota3) || nota3 < 0 || nota3 > 10 ){
+                    window.alert(`Você digitou um valor errado!`);
+                    var nota3 = Number(window.prompt(`Digite a terceira nota:`));
+                }
+    
+                var nota4 = Number(window.prompt(`Digite a quarta nota:`));
+                while(isNaN(nota4) || nota4 < 0 || nota4 > 10 ){
+                    window.alert(`Você digitou um valor errado!`);
+                    var nota4 = Number(window.prompt(`Digite a quarta nota:`));
+                }
+    
+                var nota5 = Number(window.prompt(`Digite a quinta nota:`));
+                while(isNaN(nota5) || nota5 < 0 || nota5 > 10 ){
+                    window.alert(`Você digitou um valor errado!`);
+                    var nota5 = Number(window.prompt(`Digite a quinta nota:`));
+                }
+    
+                var media = (idade1 + idade2 + idade3 + idade4 + idade5) / 5;
+            
+            </script>
+    
+        </head>
+       
+        <body>
+                    
+            <h1>24° Questão</h1>
+            <br>
+    
+            <script> 
+    
+                if(media < 6){
+                    document.write(`Infelizmente sua média foi ${media}, ou seja, você não passou.`)
+                }else if(media >= 6){
+                    document.write(`Parabéns sua média foi ${media}, ou seja, você passou!`)
+                } 
+            </script>
+    
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>  
+    
+    
+            <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+    
+            <a href="ResL3.html">
+                <input type="button" class="button" value="Voltar">
+                </a>
+    
+        </body>
+            
+    </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 18° Questão</title>
+
+        <!-- Lista 1 Questão 18 
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link 
+            de Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando este link 
+            (em minutos). -->
+        
+        <script>
+            var mb = Number(window.prompt(`Digite o valor em MB do tamanho do arquivo para download:`));    
+            
+            while(mb < 0){                
+                window.alert(`O valor em MB do tamanho do arquivo para download não pode ser um número negativo.`);
+                var mb = Number(window.prompt(`Digite o valor em MB do tamanho do arquivo para download:`));  
+
+            }
+            
+            var mbps = Number(window.prompt(`Digite o valor em Mbps da velocidade do link de Internet:`));
+
+            while(mbps < 0){                
+                window.alert(`O valor em Mbps da velocidade do link de Internet não pode ser um número negativo.`);
+                var mbps = Number(window.prompt(`Digite o valor em Mbps da velocidade do link de Internet:`));  
+
+            }
+
+            var tempoS = (mb * 8) / mbps;
+            var tempoM = (tempoS / 60).toFixed(2);
+            window.alert(`O tempo aproximado de download do arquivo usando este link é ${tempoM} minutos;`);      
+     
+            function FuncaoMostre() {
+                window.alert(`O tempo aproximado de download do arquivo usando este link é ${tempoM} minutos;`);                           
+            }
+   
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                font-family: helvetica, arial, sans-serif;
+                text-shadow: 0 0 15px rgb(20, 20, 20);
+
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+
+        <h1>18° Questão</h1>
+
+        <h4>Clique no butão [Mostre-me] para que o programa mostre o resultado novamente.</h4>
+        
+        <button class="button" onclick="FuncaoMostre()">Mostre-me</button>
+
+        <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL1.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+            
+    </body>
+
+</html>

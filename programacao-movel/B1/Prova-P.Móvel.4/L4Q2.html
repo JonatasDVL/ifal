@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 2
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um Programa que leia um vetor de 10 números reais e mostre-os na ordem inversa.-->
+
+
+    <script>
+        var vetores = [];
+        for (var i = 1; i < 11; i++) {
+            var vetor = Number(window.prompt(`Digite ${i}° número:`));
+            while (isNaN(vetor)) {
+                window.alert(`Você não digitou um número!`)
+                var vetor = Number(window.prompt(`Digite ${i}° NÚMERO:`));
+            }
+            vetores.push(vetor);
+
+        }
+        vetores.reverse();
+        window.alert(`Os números digitados foram: ${vetores}.`);
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>2° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

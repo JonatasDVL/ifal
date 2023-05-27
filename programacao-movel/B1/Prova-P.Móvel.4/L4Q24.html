@@ -1,0 +1,102 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>24° Questão</title>
+        <link rel="stylesheet" href="ResL4.css">
+
+        <!-- Lista 4 Questão 24
+            Dupla:  Ezequiel Santana e Jônatas Duarte 
+            Prof: Italo Rodrigo da Silva Arruda
+            Disciplina: Programação Móvel 
+            Turma: 513
+            -->
+
+        <!-- Faça um programa que simule um lançamento de dados. Lance o dado 100 vezes e armazene os resultados em um vetor . Depois, mostre quantas vezes cada valor foi conseguido. Dica: use um vetor de contadores(1-6) e uma função para gerar numeros aleatórios, simulando os lançamentos dos dados. -->
+
+
+        <script>
+            var vetor = [0, 0, 0, 0, 0, 0];
+
+            for (var i = 0; i < 100; i++) {
+                var numero = Math.floor(Math.random() * 10);
+                while (numero < 1 || numero > 6) {
+                    var numero = Math.floor(Math.random() * 10);
+                }
+                switch (numero) {
+                    case 1:
+                        vetor[0]++;
+                        break;
+                    case 2:
+                        vetor[1]++;
+                        break;
+                    case 3:
+                        vetor[2]++;
+                        break;
+                    case 4:
+                        vetor[3]++;
+                        break;
+                    case 5:
+                        vetor[4]++;
+                        break;
+                    case 6:
+                        vetor[5]++;
+                        break;
+                }
+            }
+
+            var maior = Math.max(vetor[0], vetor[1], vetor[2], vetor[3], vetor[4], vetor[5]);
+            var j = 1;
+            for (var i = 0; i < 6; i++) {
+                if (vetor[i] == maior) {
+                    maior = j;
+                }
+                j++;
+            }
+
+            switch (maior) {
+                case 1:
+                    maior = "um";
+                    break;
+                case 2:
+                    maior = "dois";
+                    break;
+                case 3:
+                    maior = "três";
+                    break;
+                case 4:
+                    maior = "quatro"; 
+                    break;
+                case 5:
+                    maior = "cinco"; 
+                    break;
+                case 6:
+                    maior = "seis"; 
+                    break;
+            }
+
+            window.alert(`Lado um: ${vetor[0]};\nLado dois: ${vetor[1]};\nLado três: ${vetor[2]};\nLado quatro: ${vetor[3]};\nLado cinco: ${vetor[4]};\nLado seis: ${vetor[5]};
+            \nO dado caiu mais vezes no lado ${maior}.`);
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1>24° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL4.html">
+            <input type="button" class="button" value="Voltar">
+        </a>
+
+    </body>
+
+    </html>

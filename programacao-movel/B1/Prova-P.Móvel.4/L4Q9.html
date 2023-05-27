@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 9
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!--Faça um Programa que leia um vetor A com 10 números inteiros, calcule e mostre a soma dos quadrados dos elementos do vetor.-->
+
+</head>
+
+<body>
+
+    <h1>9° Questão</h1>
+
+    <script>
+        var A = [];
+        var soma = 0;
+        for (var i = 1; i < 11; i++) {
+            var a = Number(window.prompt(`Digite o ${i}° número inteiro:`));
+            var int = a % 2;
+            while (isNaN(a) || int != 1 && int != -1 && int != 0) {
+                window.alert(`Você não digitou um número inteiro!`)
+                var a = Number(window.prompt(`Digite o ${i}° NÚMERO INTEIRO:`));
+                int = a % 2;
+            }
+            A.push(a);
+            soma += a ** 2;
+        }
+        window.alert(`Os números digitados foram: ${A};\n A soma dos quadrados dos elementos foi: ${soma}.`);
+
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

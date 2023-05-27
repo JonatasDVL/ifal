@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>10° Questão - Funções</title>
+	<link rel="stylesheet" href="ResL5.css">
+
+	<!-- Lista 5 Questão 10
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+	<!-- Jogo de Craps. Faça um programa de implemente um jogo de Craps. O jogador lança um par de dados, obtendo um valor entre 2 e 12. Se, na primeira jogada, você tirar 7 ou 11, você um "natural" e ganhou. Se você tirar 2, 3 ou 12 na primeira jogada, isto é chamado de "craps" e você perdeu. Se, na primeira jogada, você fez um 4, 5, 6, 8, 9 ou 10,este é seu "Ponto". Seu objetivo agora é continuar jogando os dados até tirar este número novamente. Você perde, no entanto, se tirar um 7 antes de tirar este Ponto novamente.-->
+
+	<script>
+		var dado1 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+		var dado2 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+		var sorteio1 = Math.floor(Math.random() * dado1.length);
+		var sorteio2 = Math.floor(Math.random() * dado2.length);
+		dado1 = (dado1[sorteio1]);
+		dado2 = (dado2[sorteio2]);
+		var ganhou = 0;
+		var perdeu = 0;
+
+		if (dado1 == 7 || dado1 == 11 || dado2 == 7 || dado2 == 11) {
+			ganhou++;
+		} else if (dado1 == 2 || dado1 == 3 || dado1 == 12 || dado2 == 2 || dado2 == 3 || dado2 == 12) {
+			perdeu++;
+		}
+		var d1 = dado1;
+		var d2 = dado2;
+		while (ganhou == 0 && perdeu == 0) {
+			if (dado1 == 7 || dado2 == 7) {
+				perdeu++;
+			} else if (d1 == dado1 || d2 == dado2) {
+				ganhou++;
+			} else if (dado1 == 4 || dado1 == 5 || dado1 == 6 || dado1 == 8 || dado1 == 9 || dado1 == 10 || dado2 == 4 || dado2 == 5 || dado2 == 6 || dado2 == 8 || dado2 == 9 || dado2 == 10) {
+				alert("Ganhou um ponto, jogue novamente")
+				var dado1 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+				var dado2 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+				sorteio1 = Math.floor(Math.random() * dado1.length);
+				sorteio2 = Math.floor(Math.random() * dado2.length);
+				dado1 = (dado1[sorteio1]);
+				dado2 = (dado2[sorteio2]);
+			}
+		}
+
+		if (ganhou == 1) {
+			alert("Você é um natural, ou seja, você ganhou!")
+		} else {
+			alert("Craps, você perdeu")
+		}
+
+
+	</script>
+
+</head>
+
+<body>
+
+	<h1>10° Questão - Funções</h1>
+
+
+	<br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+	<h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+	<a href="ResL5.html">
+		<input type="button" class="button" value="Voltar">
+	</a>
+
+</body>

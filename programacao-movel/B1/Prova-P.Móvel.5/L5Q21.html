@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 21
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Conta espaços e vogais. Dado uma string com uma frase informada pelo usuário (incluindo espaços em branco), conte:
+            quantos espaços em branco existem na frase.
+            quantas vezes aparecem as vogais a, e, i, o, u.-->
+
+</head>
+
+<body>
+
+    <h1>7° Questão - Strings</h1>
+
+    <script>
+        var frase = String(window.prompt(`Digite uma frase: `));
+        var quantidadeCaracteres = frase.length;
+        frase = frase.toUpperCase();
+        frase = frase.normalize('NFD');
+        var espacos = 0;
+        var vogais = 0;
+        var j = 1;
+
+        for (var i = 0; i <= quantidadeCaracteres; i++) {
+            var letra = frase.substring(i, j);
+            if (letra == " ") {
+                espacos++;
+            } else if (letra == "A" || letra == "E" || letra == "I" || letra == "O" || letra == "U") {
+                vogais++;
+            }
+            j++;
+        }
+
+        document.write(`Espaços em branco existentes na frase: ${espacos}; <br>
+        Quantidade de vogais existentes na frase: ${vogais}.`);
+
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

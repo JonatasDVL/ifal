@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 23
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Verificação de CPF. Desenvolva um programa que solicite a digitação de um número de CPF no formato xxx.xxx.xxx-xx e indique se é um número válido ou inválido através da validação dos dígitos verificadores edos caracteres de formatação.-->
+
+    <script>
+        var cpf = String(window.prompt(`Digite seu CPF no formato "xxx.xxx.xxx-xx": `));
+
+        while (cpf.length != 14) {
+            window.alert(`Você digitou um valor inválido!`);
+            var cpf = String(window.prompt(`Digite seu CPF no formato "xxx.xxx.xxx-xx": `));
+        }
+
+        // selecionando cada caracter da variavel data
+        var cpf1 = parseInt(cpf.substring(0, 3));
+        var cpf2 = parseInt(cpf.substring(4, 7));
+        var cpf3 = parseInt(cpf.substring(8, 11));
+        var cpf4 = parseInt(cpf.substring(12, 14));
+        var ponto1 = cpf.substring(3, 4);
+        var ponto2 = cpf.substring(7, 8);
+        var traco = cpf.substring(11, 12);
+
+        console.log(`${cpf} ${cpf1} ${cpf2} ${cpf3} ${cpf4}`);
+        console.log(`${ponto1} ${ponto2} ${traco}`);
+
+        // definindo e dizendo se a data é válida ou não 
+        if (ponto1 == "." && ponto2 == "." && traco == "-" && cpf1 < 1000 && cpf1 > -1 && cpf2 < 1000 && cpf2 > -1 && cpf3 < 1000 && cpf3 > -1 && cpf4 < 1000 && cpf4 > -1) {
+            window.alert(`O CPF digitado está válido!`);
+        } else {
+            window.alert(`Você digitou o CPF em um formato inválido!`);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>9° Questão - Strings</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

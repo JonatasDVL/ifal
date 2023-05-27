@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 3
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que leia e valide as seguintes informações:
+                Nome: maior que 3 caracteres;
+                Idade: entre 0 e 150;
+                Salário: maior que zero;
+                Sexo: 'f' ou 'm';
+                Estado Civil: 's', 'c', 'v', 'd';-->
+
+
+        <script>
+           var nome = String(window.prompt(`Digite o seu nome: `));  
+
+            while(nome == "" || nome.length < 4){
+                    window.alert(`Nome digitado está inválido!`);
+                    var nome = String(window.prompt(`Digite o seu nome: `));
+                }
+
+            var idade = Number(window.prompt(`Digite sua idade: `));  
+
+            while(isNaN(idade) || idade < 0 || idade > 150){
+                    window.alert(`O valor da idade digitada está inválida!`);
+                    var idade = Number(window.prompt(`Digite sua idade: `));  
+                }
+
+            var salario = Number(window.prompt(`Digite o valor do seu salário: `));  
+
+            while(isNaN(salario) || salario < 0){
+                    window.alert(`O valor do sálario digitado está inválido!`);
+                    var salario = Number(window.prompt(`Digite o valor do seu sálario: `));  
+                }
+
+            var sexo = String(window.prompt(`Digite F se você for do sexo feminino ou digite M se você for do sexo masculino: `)); 
+            var sexo = sexo.substring(0, 1);
+
+            while(sexo != "F" && sexo != "M" && sexo != "f" && sexo != "m"){
+                window.alert(`Você digitou um valor inválido!`);
+                var sexo = String(window.prompt(`Digite F se você for do sexo feminino ou digite M se você for do sexo masculino: `)); 
+                var sexo = sexo.substring(0, 1);
+            }
+
+            var estadoCivil = String(window.prompt(`Digite (S) se você for solteiro, (C)casado, (V)viúvo, (D)divorciado: `)); 
+            var estadoCivil = estadoCivil.substring(0, 1);
+
+            while(estadoCivil != "S" && estadoCivil != "C" && estadoCivil != "V" && estadoCivil != "D" && estadoCivil != "s" && estadoCivil != "c" && estadoCivil != "v" && estadoCivil != "d"){
+                window.alert(`Você digitou um valor inválido!`);
+                var estadoCivil = String(window.prompt(`Digite (S) se você for solteiro, (C)casado, (V)viúvo, (D)divorciado: `)); 
+                var estadoCivil = estadoCivil.substring(0, 1);
+            }
+
+            window.alert(`Os valores digitados estão válidos`);
+
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>3° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 18
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Uma grande emissora de televisão quer fazer uma enquete entre os seus telespectadores para saber qual o melhor jogador após cada jogo. Para isto, faz-se necessário o desenvolvimento de um programa, que será utilizado pelas telefonistas, para a computação dos votos. Sua equipe foi contratada para desenvolver este programa, utilizando a linguagem de programação C++. Para computar cada voto, a telefonista digitará um número, entre 1 e 23, correspondente ao número da camisa do jogador. Um número de jogador igual zero, indica que a votação foi encerrada. Se um número inválido for digitado, o programa deve ignorá-lo, mostrando uma breve mensagem de aviso, e voltando a pedir outro número. Após o final da votação, o programa deverá exibir:
+            
+            O total de votos computados;
+            Os númeos e respectivos votos de todos os jogadores que receberam voto(s);
+            O percentual de votos de cada um destes jogadores;
+            O número do jogador escolhido como o melhor jogador da partida, juntamente com o número de votos e o percentual de votos dados a ele.
+
+        Observe que os votos inválidos e o zero final não devem ser computados como votos. O resultado aparece ordenado pelo número do jogador. O programa deve fazer uso de arrays. O programa deverá executar o cálculo do percentual de cada jogador através de uma função. Esta função receberá dois parâmetros: o número de votos de um jogador e o total de votos. A função calculará o percentual e retornará o valor calculado. Abaixo segue uma tela de exemplo. O disposição das informações deve ser o mais próxima possível ao exemplo. Os dados são fictícios e podem mudar a cada execução do programa. Ao final, o programa deve ainda gravar os dados referentes ao resultado da votação em um arquivo texto no disco, obedecendo a mesma disposição apresentada na tela.
+            
+            Enquete: Quem foi o melhor jogador?
+
+            Número do jogador (0=fim): 9
+            Número do jogador (0=fim): 10
+            Número do jogador (0=fim): 9
+            Número do jogador (0=fim): 10
+            Número do jogador (0=fim): 11
+            Número do jogador (0=fim): 10
+            Número do jogador (0=fim): 50
+
+            Informe um valor entre 1 e 23 ou 0 para sair!
+            Número do jogador (0=fim): 9
+            Número do jogador (0=fim): 9
+            Número do jogador (0=fim): 0
+
+            Resultado da votação:
+
+            Foram computados 8 votos.
+
+            Jogador Votos           %
+            9               4               50,0%
+            10              3               37,5%
+            11              1               12,5%
+            O melhor jogador foi o número 9, com 4 votos, correspondendo a 50% do total de votos.-->
+
+
+    <script>
+        var computados = 0;
+        var votos = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var percentual = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var vetor = [];
+        while (voto != 0) {
+            var voto = Number(window.prompt(`Vote entre 1 e 23 ou 0 para encerrar o programa!`));
+            while (isNaN(voto) || voto < 0 && voto > 23) {
+                window.alert(`Você digitou um valor inválido. Vote novamente!`);
+                voto = Number(window.prompt(`Vote entre 1 e 23 ou 0 para encerrar o programa!`));
+            }
+            if (voto != 0) {
+                computados++;
+                vetor.push(voto);
+            }
+        }
+
+        for (var i = 0; i < computados; i++) {
+            var x = 1;
+            for (var j = 0; j < 23; j++) {
+                if (vetor[i] == x) {
+                    votos[j]++;
+                    percentual[j] = (votos[j] / computados) * 100;
+                    j = 24;
+                }
+                x++;
+            }
+        }
+        var melhorPontuacao = Math.max(votos[0], votos[1], votos[2], votos[3], votos[4], votos[5], votos[6], votos[7], votos[8], votos[9], votos[10], votos[11], votos[12], votos[13], votos[14], votos[15], votos[16], votos[17], votos[18], votos[19], votos[20], votos[21], votos[22]);
+
+        var melhorPercentual = Math.max(percentual[0], percentual[1], percentual[2], percentual[3], percentual[4], percentual[5], percentual[6], percentual[7], percentual[8], percentual[9], percentual[10], percentual[11], percentual[12], percentual[13], percentual[14], percentual[15], percentual[16], percentual[17], percentual[18], percentual[19], percentual[20], percentual[21], percentual[22]);
+    </script>
+
+</head>
+
+<body>
+
+    <h1>18° Questão</h1>
+
+    <script>
+        document.write(`Total de votos computados: ${computados};<br><br>`);
+
+        document.write(`O número da camisa e quantidade de votos recebidos respectivamente: <br>
+        Votos do camisa 1: ${votos[0]} voto(s);<br>
+        Votos do camisa 2: ${votos[1]} voto(s);<br>
+        Votos do camisa 1: ${votos[2]} voto(s);<br>
+        Votos do camisa 4: ${votos[3]} voto(s);<br>
+        Votos do camisa 5: ${votos[4]} voto(s);<br>
+        Votos do camisa 6: ${votos[5]} voto(s);<br>
+        Votos do camisa 7: ${votos[6]} voto(s);<br>
+        Votos do camisa 8: ${votos[7]} voto(s);<br>
+        Votos do camisa 9: ${votos[8]} voto(s);<br>
+        Votos do camisa 10: ${votos[9]} voto(s);<br>
+        Votos do camisa 11: ${votos[10]} voto(s);<br>
+        Votos do camisa 12: ${votos[11]} voto(s);<br>
+        Votos do camisa 13: ${votos[12]} voto(s);<br>
+        Votos do camisa 14: ${votos[13]} voto(s);<br>
+        Votos do camisa 15: ${votos[14]} voto(s);<br>
+        Votos do camisa 16: ${votos[15]} voto(s);<br>
+        Votos do camisa 17: ${votos[16]} voto(s);<br>
+        Votos do camisa 18: ${votos[17]} voto(s);<br>
+        Votos do camisa 19: ${votos[18]} voto(s);<br>
+        Votos do camisa 20: ${votos[19]} voto(s);<br>
+        Votos do camisa 21: ${votos[20]} voto(s);<br>
+        Votos do camisa 22: ${votos[21]} voto(s);<br>
+        Votos do camisa 23: ${votos[22]} voto(s).<br><br>`);
+
+        document.write(`O percentual de votos de cada um destes jogadores:<br>`);
+        document.write(`Percentual de votos do camisa 1: ${percentual[0]}%;<br>
+        Percentual de votos do camisa 2: ${percentual[1]}%;<br>
+        Percentual de votos do camisa 1: ${percentual[2]}%;<br>
+        Percentual de votos do camisa 4: ${percentual[3]}%;<br>
+        Percentual de votos do camisa 5: ${percentual[4]}%;<br>
+        Percentual de votos do camisa 6: ${percentual[5]}%;<br>
+        Percentual de votos do camisa 7: ${percentual[6]}%;<br>
+        Percentual de votos do camisa 8: ${percentual[7]}%;<br>
+        Percentual de votos do camisa 9: ${percentual[8]}%;<br>
+        Percentual de votos do camisa 10: ${percentual[9]}%;<br>
+        Percentual de votos do camisa 11: ${percentual[10]}%;<br>
+        Percentual de votos do camisa 12: ${percentual[11]}%;<br>
+        Percentual de votos do camisa 13: ${percentual[12]}%;<br>
+        Percentual de votos do camisa 14: ${percentual[13]}%;<br>
+        Percentual de votos do camisa 15: ${percentual[14]}%;<br>
+        Percentual de votos do camisa 16: ${percentual[15]}%;<br>
+        Percentual de votos do camisa 17: ${percentual[16]}%;<br>
+        Percentual de votos do camisa 18: ${percentual[17]}%;<br>
+        Percentual de votos do camisa 19: ${percentual[18]}%;<br>
+        Percentual de votos do camisa 20: ${percentual[19]}%;<br>
+        Percentual de votos do camisa 21: ${percentual[20]}%;<br>
+        Percentual de votos do camisa 22: ${percentual[21]}%;<br>
+        Percentual de votos do camisa 23: ${percentual[22]}%.<br><br>`);
+
+        for (var j = 0; j < 23; j++) {
+            if (percentual[j] == melhorPercentual){
+                var jogador = 1 + j;
+            }
+        }
+
+        document.write(`O melhor jogador foi o número ${jogador}, com ${melhorPontuacao} votos, correspondendo a ${melhorPercentual}% do total de votos.`);
+    </script>
+
+    <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

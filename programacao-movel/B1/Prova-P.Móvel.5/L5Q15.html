@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 15
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Tamanho de strings. Faça um programa que leia 2 strings e informe o conteúdo delas seguido do seu comprimento. Informe também se as duas strings possuem o mesmo comprimento e são iguais ou diferentes no conteúdo.
+            Compara duas strings
+            String 1: Brasil Hexa 2006
+            String 2: Brasil! Hexa 2006!
+            Tamanho de "Brasil Hexa 2006": 16 caracteres
+            Tamanho de "Brasil! Hexa 2006!": 18 caracteres
+            As duas strings são de tamanhos diferentes.
+            As duas strings possuem conteúdo diferente.-->
+
+
+    <script>
+
+        var frase1 = window.prompt(String(`Digite uma frase:`));
+        var frase2 = window.prompt(String(`Digite mais uma frase:`));
+
+        var caracteres1 = frase1.length;
+        var caracteres2 = frase2.length;
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>1° Questão - Strings</h1>
+
+    <script>
+        document.write(`String 1: ${frase1}; <br> 
+        String 2: ${frase2}; <br>
+        Tamanho de "${frase1}": ${caracteres1} caracteres; <br> 
+        Tamanho de "${frase2}": ${caracteres2} caracteres; <br>`);
+
+        if (caracteres1 != caracteres2) {
+            document.write(`As duas strings são de tamanhos diferentes; <br>`);
+            document.write(`As duas strings possuem conteúdo diferente.`);
+        } else if (caracteres1 == caracteres2 && frase1 != frase2) {
+            document.write(`As duas strings têm o mesmo tamanho; <br>`);
+            document.write(`As duas strings possuem conteúdo diferente.`);
+        } else {
+            document.write(`As duas strings têm o mesmo tamanho; <br>`);
+            document.write(`As duas strings possuem o mesmo conteúdo.`);
+        }
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

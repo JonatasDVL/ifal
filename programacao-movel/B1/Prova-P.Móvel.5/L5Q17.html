@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 17
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Nome na vertical. Faça um programa que solicite o nome do usuário e imprima-o na vertical.
+            F
+            U
+            L
+            A
+            N
+            O-->
+
+</head>
+
+<body>
+
+    <h1>3° Questão - Strings</h1>
+
+    <script>
+        var nome = window.prompt(String(`Digite seu nome:`));
+        nome = nome.toUpperCase();
+        var quantidadeCaracteres = nome.length;
+        var j = 1;
+
+        for (var i = 0; i <= quantidadeCaracteres; i++) {
+            var letra = nome.substring(i,j)
+            document.write(`${letra}<br>`);
+            j++;
+        }
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

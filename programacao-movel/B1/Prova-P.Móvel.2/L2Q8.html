@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>8° Questão</title>
+        
+        <!-- Lista 2 Questão 8
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato. -->
+
+
+        <script>
+            var preço1 = Number(window.prompt(`Digite o preço do primeiro produto: `)); 
+            var preço2 = Number(window.prompt(`Digite o preço do segundo produto: `)); 
+            var preço3 = Number(window.prompt(`Digite o preço do terceiro produto: `)); 
+ 
+            // definindo e dizendo qual dos três produtos é o mais barato e o cliente deve comprar
+            var menorPreço = Math.min(preço1, preço2, preço3);
+
+            if(preço1 == menorPreço && preço2 == menorPreço && preço3 == menorPreço){
+                window.alert(`Os três produtos têm o mesmo preço!`);
+            }else if(preço1 == menorPreço && preço2 == menorPreço){
+                window.alert(`Compre o primeiro ou segundo produto com o preço de ${preço2}, pois os dois têm o menor preço.`);
+            }else if(preço1 == menorPreço && preço3 == menorPreço){
+                window.alert(`Compre o primeiro ou terceiro produto com o preço de ${preço2}, pois os dois têm o menor preço.`);
+            }else if(preço2 == menorPreço && preço3 == menorPreço){
+                window.alert(`Compre o segundo ou terceiro produto com o preço de ${preço2}, pois os dois têm o menor preço.`);
+            }else if(preço1 == menorPreço){
+                window.alert(`Compre o primeiro produto com o preço de ${preço1} reais.`);
+            }else if(preço2 == menorPreço){
+                window.alert(`Compre o segundo produto com o preço de ${preço2} reais.`);
+            }else if(preço3 == menorPreço){
+                window.alert(`Compre o terceiro produto com o preço de ${preço3} reais.`);
+            }
+
+            /* outra forma para definir e dizer qual dos três produtos é mais barato e o cliente deve comprar
+            if(preço1 < preço2 && preço1 < preço3){
+                window.alert(`Compre o primeiro produto com o preço de ${preço1} reais.`);
+            }else if(preço1 > preço2 && preço2 < preço3){
+                window.alert(`Compre o segundo produto com o preço de ${preço2} reais.`);
+            }else if(preço1 > preço3 && preço2 > preço3){
+                window.alert(`Compre o terceiro produto com o preço de ${preço3} reais.`);
+            }else if(preço1 > preço2 && preço1 > preço3 && preço2 == preço3){
+                window.alert(`Compre o segundo ou terceiro produto com o preço de ${preço2}, pois os dois têm o menor preço.`);
+            }else if(preço1 < preço2 && preço2 > preço3 && preço1 == preço3){
+                window.alert(`Compre o primeiro ou terceiro produto com o preço de ${preço1}, pois os dois têm o menor preço.`);
+            }else if(preço1 < preço3 && preço2 < preço3 && preço1 == preço2){
+                window.alert(`Compre o primeiro ou segundo produto com o preço de ${preço1}, pois os dois têm o menor preço.`);
+            }else{
+                window.alert(`Os três produtos têm o mesmo preço!`);
+            }
+            */ 
+           
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>8° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

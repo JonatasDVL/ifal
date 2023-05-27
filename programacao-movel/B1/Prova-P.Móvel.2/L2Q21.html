@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>21° Questão</title>
+        
+        <!-- Lista 2 Questão 21
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+            <!-- Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.
+                Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+                Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1. -->
+
+        <script>
+            var valor = Number(window.prompt(`Digite o valor do saque(valor tem que ser um número inteiro, o valor mínimo é de 10 reais e o valor máximo é de 600 reais): `)); 
+ 
+
+            // "loop" para comprovar se o valor do saque está conforme o padrão
+            while(isNaN(valor) || valor < 10 || valor > 600 || valor.length >= 4){
+                window.alert(`Você digitou um valor inválido para o saque, pois o valor tem que ser um número INTEIRO, o valor MÍNIMO é de 10 reais e o valor MÁXIMO é de 600 reais!`);
+                var valor = Number(window.prompt(`Digite o valor do saque: `));    
+            }
+
+            // fazendo o calculo das quantidade de nota
+            if(valor >= 100){
+                var resto1 = valor % 100;
+                var cem = (valor - resto1) / 100 
+                var resto2 = resto1 % 50;
+                var cinquenta = (resto1 - resto2) / 50
+                var resto3 = resto2 % 10;
+                var dez = (resto2 - resto3) / 10
+                var resto4 = resto3 % 5;
+                var cinco = (resto3 - resto4) / 5
+                var um = resto4 / 1
+
+            }else if(valor >= 50){
+                var resto1 = valor % 50;
+                var cinquenta = (valor - resto1) / 50 
+                var resto2 = resto1 % 10;
+                var dez = (resto1 - resto2) / 10
+                var resto3 = resto2 % 5;
+                var cinco = (resto2 - resto3) / 5
+                var um = resto3 / 1
+
+            }else if(valor >= 10){
+                var resto1 = valor % 10;
+                var dez = (valor - resto1) / 10
+                var resto2 = resto1 % 5;
+                var cinco = (resto1 - resto2) / 5
+                var um = resto2 / 1
+                
+            }else if(valor >= 5){
+                var resto1 = valor % 5;
+                var cinco = (valor - resto1) / 5 
+                var um = resto1 / 1
+
+            }else if(valor >= 1){
+                var um = valor / 1
+            }
+
+            // dizendo a quantidade de notas necessaria
+            if(valor >= 100){
+                window.alert(`Valor do saque: ${valor}\nSerá entregue: \n    ${cem} nota(s) de 100 reais; \n    ${cinquenta} nota(s) de 50 reais;\n    ${dez} nota(s) de 10 reais;\n    ${cinco} nota(s) de 5 reais;\n    ${um} nota(s) de 1 real.`);
+
+            }else if(valor >= 50){
+                window.alert(`Valor do saque: ${valor}\nSerá entregue:\n    ${cinquenta} nota(s) de 50 reais;\n    ${dez} nota(s) de 10 reais;\n    ${cinco} nota(s) de 5 reais;\n    ${um} nota(s) de 1 real.`);
+
+            }else if(valor >= 10){
+                window.alert(`Valor do saque: ${valor}\nSerá entregue:\n    ${dez} nota(s) de 10 reais;\n    ${cinco} nota(s) de 5 reais;\n    ${um} nota(s) de 1 real.`);
+ 
+            }else if(valor >= 5){
+                window.alert(`Valor do saque: ${valor}\nSerá entregue:\n    ${cinco} nota(s) de 5 reais;\n    ${um} nota(s) de 1 real.`);
+
+            }else if(valor >= 1){
+                window.alert(`Valor do saque:${valor} \nSerá entregue:\n    ${um} nota(s) de 1 real.`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>21° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

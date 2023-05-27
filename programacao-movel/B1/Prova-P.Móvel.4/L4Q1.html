@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 1 
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um Programa que leia um vetor de 5 números inteiros e mostre-os.-->
+
+    <script>
+        var vetores = [];
+        for (var i = 1; i < 6; i++) {
+            var vetor = Number(window.prompt(`Digite o ${i}° número inteiro:`));
+            var int = vetor % 2;
+            while (isNaN(vetor) || int != 1 && int != -1 && int != 0) {
+                window.alert(`Você não digitou um número inteiro!`)
+                var vetor = Number(window.prompt(`Digite o ${i}° NÚMERO INTEIRO:`));
+                var int = vetor % 2;
+            }
+            vetores.push(vetor);
+        }
+        window.alert(`Os números digitados foram: ${vetores}.`);
+
+        /*
+                    or
+
+        var vetores = [5,10,15,20,25];
+        window.alert(`${vetores}`);
+
+                    or
+
+        var vetor1 = Number(window.prompt(`Digite um número inteiro:`));  
+        var int = vetor1 % 2;
+        while(isNaN(vetor1) || int != 1 && int != 0){
+            window.alert(`Você digitou um valor errado!`);
+            var vetor1 = Number(window.prompt(`Digite um número inteiro:`));
+            var int = vetor1 % 2;
+        }
+
+        var vetor2 = Number(window.prompt(`Digite mais um número inteiro:`));  
+        var int = vetor2 % 2;
+        while(isNaN(vetor2) || int != 1 && int != 0){
+            window.alert(`Você digitou um valor errado!`);
+            var vetor2 = Number(window.prompt(`Digite mais um número inteiro:`));
+            var int = vetor2 % 2;
+        }
+
+        var vetor3 = Number(window.prompt(`Digite mais um número inteiro:`));  
+        var int = vetor3 % 2;
+        while(isNaN(vetor3) || int != 1 && int != 0){
+            window.alert(`Você digitou um valor errado!`);
+            var vetor3 = Number(window.prompt(`Digite mais um número inteiro:`));
+            var int = vetor3 % 2;
+        }
+
+        var vetor4 = Number(window.prompt(`Digite mais um número inteiro:`));  
+        var int = vetor4 % 2;
+        while(isNaN(vetor4) || int != 1 && int != 0){
+            window.alert(`Você digitou um valor errado!`);
+            var vetor4 = Number(window.prompt(`Digite mais um número inteiro:`));
+            var int = vetor4 % 2;
+        }
+
+        var vetor5 = Number(window.prompt(`Digite mais um número inteiro:`));  
+        var int = vetor5 % 2;
+        while(isNaN(vetor5) || int != 1 && int != 0){
+            window.alert(`Você digitou um valor errado!`);
+            var vetor2 = Number(window.prompt(`Digite mais um número inteiro:`));
+            var int = vetor5 % 2;
+        }
+        window.alert(`${vetor1}${vetor2}${vetor3}${vetor4}${vetor5}`);
+        */
+    </script>
+
+</head>
+
+<body>
+
+    <h1>1° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>13° Questão</title>
+
+        <!-- Lista 1 Questão 13 
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso 
+            ideal, utilizando as seguintes fórmulas:
+            Para homens: (72.7*h) - 58
+            Para mulheres: (62.1*h) - 44.7 -->
+        
+        <script>
+            var h = Number(window.prompt(`Digite o valor da sua altura em metros:`));     
+            
+            while(h <= 0.54 && h >= 2.51){                
+                window.alert(`O valor da sua altura não se encaixa em uma altura humana.`);
+                var altura = Number(window.prompt(`Digite o valor da sua altura em centimetros:`)); 
+            }
+            
+            if (window.confirm(' Você é um homem click em [ok], se você for uma mulher click em [cancel]:')){
+                var pesoIdeal = (72.7 * h) - 58;
+                window.alert(`Seu peso ideal é de ${pesoIdeal}.`);
+            } else{
+                var pesoIdeal = (62.1 * h) - 44.7;
+                window.alert(`Seu peso ideal é de ${pesoIdeal}.`);
+            }
+            
+            function FuncaoMostre() {
+                window.alert(`Seu peso ideal é de ${pesoIdeal}.`);           
+            }
+ 
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                font-family: helvetica, arial, sans-serif;
+                text-shadow: 0 0 15px rgb(20, 20, 20);
+
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+
+        <h1>13° Questão</h1>
+
+        <h4>Clique no butão [Mostre-me] para que o programa mostre o resultado novamente.</h4>
+        
+        <button class="button" onclick="FuncaoMostre()">Mostre-me</button>
+
+        <br>
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+        
+        <a href="ResL1.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+            
+    </body>
+
+</html>

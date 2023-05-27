@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11° Questão</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 11
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!--Data com mês por extenso. Construa uma função que receba uma data no formato DD/MM/AAAA e devolva uma string no formato D de mesPorExtenso de AAAA. Opcionalmente, valide a data e retorne NULL caso a data seja inválida.-->
+
+    <script>
+        var data = String(window.prompt(`Digite sua data de nascimento no formato "dd/mm/aaaa": `));
+        var comprovacao = data.length;
+
+        while (comprovacao != 10) {
+            window.alert(`Você digitou um valor inválido!`);
+            var data = String(window.prompt(`Digite sua data de nascimento no FORMATO "dd/mm/aaaa": `));
+            var comprovacao = data.length;
+        }
+
+        var dia = parseInt(data.substring(0, 2));
+        var mes = parseInt(data.substring(3, 5));
+        var ano = parseInt(data.substring(6, 10));
+        var barra1 = data.substring(2, 3);
+        var barra2 = data.substring(5, 6);
+
+        var divisao1 = ano % 4;
+        var divisao2 = ano % 100;
+        var divisao3 = ano % 400;
+        var divisao4 = ano / 1;
+
+        if ((barra1 == "/" && barra2 == "/" && divisao4 == ano) && (((mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 08 || mes == 10 || mes == 12) && dia <= 31) || ((mes == 04 || mes == 06 || mes == 09 || mes == 11) && dia <= 30) || (mes == 02 && dia <= 29 && divisao1 == 0 && divisao2 != 0) || (mes == 02 && dia <= 28))) {
+            var valido = 1;
+            switch (mes) {
+                case 1:
+                    mes = "Janeiro";
+                    break;
+                case 2:
+                    mes = "Fevereiro";
+                    break;
+                case 3:
+                    mes = "Março";
+                    break;
+                case 4:
+                    mes = "Abril";
+                    break;
+                case 5:
+                    mes = "Maio";
+                    break;
+                case 6:
+                    mes = "Junho";
+                    break;
+                case 7:
+                    mes = "Julho";
+                    break;
+                case 8:
+                    mes = "Agosto";
+                    break;
+                case 9:
+                    mes = "Setembro";
+                    break;
+                case 10:
+                    mes = "Outubro";
+                    break;
+                case 11:
+                    mes = "Novembro";
+                    break;
+                case 12:
+                    mes = "Dezembro";
+                    break;
+            }
+        } else {
+            var valido = 0;
+            window.alert(`Você digitou no formato errado!`);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>11° Questão - Funções</h1>
+
+    <script>
+        if (valido == 1) {
+            document.write(`Data digitada: ${dia} de ${mes} de ${ano}.`);
+        } else {
+            document.write(`Você digitou no formato errado!`);
+        }
+    </script>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

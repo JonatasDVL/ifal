@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>18° Questão</title>
+        
+        <!-- Lista 2 Questão 18
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida. -->
+
+        <script>
+            var data = String(window.prompt(`Digite uma data no formato "dd/mm/aaaa": `)); 
+            var comprovacao = data.length; 
+
+            // "loop" para comprovar se a data está com o 10 caracteres
+            while(comprovacao != 10){
+                window.alert(`Você digitou um valor inválido!`);
+                var data = String(window.prompt(`Digite uma data no FORMATO "dd/mm/aaaa": `)); 
+                var comprovacao = data.length; 
+            }
+            
+            // selecionando cada caracter da variavel data
+            var dia = parseInt(data.substring(0, 2));
+            var mes = parseInt(data.substring(3, 5));
+            var ano = parseInt(data.substring(6, 10));
+            var barra1 = data.substring(2, 3);
+            var barra2 = data.substring(5, 6);
+
+            // caso for um ano binario
+            var divisao1 = ano % 4;
+            var divisao2 = ano % 100;
+            var divisao3 = ano % 400;
+
+            // definindo e dizendo se a data é válida ou não 
+            if(barra1 == "/" && barra2 == "/"){
+                if((mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 08 || mes == 10 || mes == 12) && dia <= 31){
+                    window.alert(`A data ${data} é uma data válida.`);
+                }else if((mes == 04 || mes == 06 || mes == 09 || mes == 11) && dia <= 30){
+                    window.alert(`A data ${data} é uma data válida.`);
+                }else if(mes == 02 && dia <= 29 && divisao1 == 0 && divisao2 != 0){
+                    window.alert(`A data ${data} é uma data válida.`);
+                }else if(mes == 02 && dia <= 29 && divisao1 == 0 && divisao3 == 0){
+                    window.alert(`A data ${data} é uma data válida.`);
+                }else if(mes == 02 && dia <= 28){
+                    window.alert(`A data ${data} é uma data válida.`);
+                }else{
+                    window.alert(`A data digitada é inválida!`);
+                }
+            }else{
+                window.alert(`A data digitada é inválida!`);
+            }
+
+        </script>
+
+        <style>
+
+            body{
+                background-color: rgb(20, 20, 20);
+                color:rgb(255, 255, 255);
+                text-shadow: 2px 2px 1px rgb(20, 20, 20);
+                font-family: helvetica, arial, sans-serif;
+        
+            }
+            .button {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                background-color: #252525;    
+            }
+        
+        </style>
+    </head>
+   
+    <body background="https://i.pinimg.com/originals/57/61/5b/57615b8c0092a66c1d4058b1692955cc.gif">
+                
+        <h1>18° Questão</h1>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br> 
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL2.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

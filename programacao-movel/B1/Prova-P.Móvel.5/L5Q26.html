@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12° Questão - Strings</title>
+    <link rel="stylesheet" href="ResL5.css">
+
+    <!-- Lista 5 Questão 26
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Valida e corrige número de telefone. Faça um programa que leia um número de telefone, e corrija o número no caso deste conter somente 7 dígitos, acrescentando o '3' na frente. O usuário pode informar o número com ou sem o traço separador.
+        Valida e corrige número de telefone
+        Telefone: 461-0133
+        Telefone possui 7 dígitos. Vou acrescentar o digito três na frente.
+        Telefone corrigido sem formatação: 34610133
+        Telefone corrigido com formatação: 3461-0133-->
+
+    <script>
+        var numero = String(window.prompt(`Digite seu número de telefone no formato "xxxx-xxxx":`));
+        var traco = ".";
+        var telefone1 = ".";
+        var telefone2 = ".";
+        if(numero.length == 9){    
+            traco = numero.substring(4, 5);
+            telefone1 = (numero.substring(0, 4));
+            telefone2 = (numero.substring(5, 9));
+        }else if(numero.length == 8){
+            traco = numero.substring(3, 4);
+            telefone1 = "3" + numero.substring(0, 3);
+            telefone2 = numero.substring(4, 8);
+        }
+
+        while (numero.length != 9 && numero.length != 8 && traco == "-") {
+            window.alert(`Você digitou no formato inválido!`);
+            var numero = String(window.prompt(`Digite seu número de telefone no formato "xxxx-xxxx":`));
+            if(numero.length == 9){    
+            traco = numero.substring(4, 5);
+            telefone1 = numero.substring(0, 4);
+            telefone2 = numero.substring(5, 9);
+        }else if(numero.length == 8){
+            traco = numero.substring(3, 4);
+            telefone1 = "3" + numero.substring(0, 3);
+            telefone2 = numero.substring(4, 8);
+        }
+        }
+
+        console.log(`${telefone1} ${telefone2} ${numero} ${traco}`);
+        
+        var numeroNovo = telefone1 + traco + telefone2;
+        
+        window.alert(`Telefone corrigido sem formatação: ${numero}; \nTelefone corrigido com formatação: ${numeroNovo}.`);
+
+    </script>
+</head>
+
+<body>
+
+    <h1>12° Questão - Strings</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL5.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

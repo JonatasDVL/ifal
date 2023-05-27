@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 3
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um Programa que leia 4 notas, mostre as notas e a média na tela.-->
+
+    <script>
+        var notas = [];
+        var soma = 0;
+        for (var i = 1; i < 5; i++) {
+            var nota = Number(window.prompt(`Digite a ${i}° nota:`));
+            while (isNaN(nota)) {
+                window.alert(`Você digitou um valor inválido!`)
+                var nota = Number(window.prompt(`Digite a ${i}° NOTA:`));
+            }
+            soma += nota;
+            notas.push(nota);
+        }
+        var media = soma / 4;
+        window.alert(`As 4 notas foram respectivamente: ${notas};\nA média das notas: ${media} pontos.`);
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>3° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

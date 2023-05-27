@@ -1,0 +1,69 @@
+<DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>28° Questão</title>
+            <link rel="stylesheet" href="ResL3.css">
+            
+            <!-- Lista 3 Questão 28
+            Dupla:  Ezequiel Santana e Jônatas Duarte 
+            Prof: Italo Rodrigo da Silva Arruda
+            Disciplina: Programação Móvel 
+            Turma: 513
+            -->
+    
+            <!-- Faça um programa que calcule o valor total investido por um colecionador em sua coleção de CDs e o valor médio gasto em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um. -->
+    
+    
+            <script>    
+                var cds = Number(window.prompt(`Digite o número de CDs comprados:`));
+                var comprovacao = cds % 2;
+
+                    while(isNaN(cds) || cds < 1 || comprovacao != 1 && comprovacao != 0){
+                        window.alert(`Você digitou um valor errado!`);
+                        var cds = Number(window.prompt(`Digite o número de CDs comprados:`));
+                        var comprovacao = cds % 2;
+                    }
+                
+                var wile = cds;
+                var precoTotal = 0;
+
+                while(wile != 0){
+                var preco = Number(window.prompt(`Digite o preço que você pagou pelo CD:`)); 
+                    while(isNaN(preco) || preco < 0 ){
+                        window.alert(`Você digitou um número inválido!`);
+                        var preco = Number(window.prompt(`Digite o preco do CD:`)); 
+                    }
+                    var precoTotal = precoTotal + preco;
+                    wile--;
+                }
+                
+                var media = (precoTotal / cds).toFixed(2);
+            </script>
+    
+        </head>
+       
+        <body>
+                    
+            <h1>28° Questão</h1>
+    
+            <script> 
+    
+                document.write(`A média do preço dos CDs é de ${media} reais.`);
+              
+            </script>
+    
+            <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>  
+    
+    
+            <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+    
+            <a href="ResL3.html">
+                <input type="button" class="button" value="Voltar">
+                </a>
+    
+        </body>
+            
+    </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 16
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Utilize uma lista para resolver o problema a seguir. Uma empresa paga seus vendedores com base em comissões. O vendedor recebe $200 por semana mais 9 por cento de suas vendas brutas daquela semana. Por exemplo, um vendedor que teve vendas brutas de $3000 em uma semana recebe $200 mais 9 por cento de $3000, ou seja, um total de $470. Escreva um programa (usando um array de contadores) que determine quantos vendedores receberam salários nos seguintes intervalos de valores:
+        $200 - $299
+        $300 - $399
+        $400 - $499
+        $500 - $599
+        $600 - $699
+        $700 - $799
+        $800 - $899
+        $900 - $999
+        $1000 em diante
+        Desafio: Crie ma fórmula para chegar na posição da lista a partir do salário, sem fazer vários ifs aninhados.-->
+
+
+    <script>
+        var vetor = [];
+        var vendedores = Number(window.prompt(`Digite a quantidade de vendedores da empresa:`));
+        var quantidade = 0;
+        vendedores++;
+
+        for (i = 1; i < vendedores; i++) {
+            vendaBruta = Number(window.prompt(`Digite o valor da venda bruta do ${i}° vendedor:`));
+            while (isNaN(vendaBruta) || vendaBruta < 0) {
+                window.alert(window.alert(`Você não digitou um número positivo!`))
+                vendaBruta = Number(window.prompt(`Digite o valor da venda bruta do ${i}° vendedor:`));
+            }
+            var total = vendaBruta / 100 * 9 + 200;
+            vetor.push(total)
+            quantidade++;
+        }
+
+        var quantidadeVendedores = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        for (var i = 0; i < quantidade; i++) {
+            var x = 1000;
+            for(var j = 8; j > -1; j--){
+                if(vetor[i] >= x){
+                    quantidadeVendedores[j]++;
+                    j = -2;
+                }
+                console.log(`${x}`);
+                x -= 100;
+                console.log(`${quantidadeVendedores[j]}`);
+
+            }
+        }
+
+        window.alert(`\nQuantidade de vendedores receberam salários nos seguintes intervalos de valores:
+        \n${quantidadeVendedores[0]} vendedores recebem: $200 - $299;\n${quantidadeVendedores[1]} vendedores recebem: $300 - $399;\n${quantidadeVendedores[2]} vendedores recebem: $400 - $499;\n${quantidadeVendedores[3]} vendedores recebem: $500 - $599;\n${quantidadeVendedores[4]} vendedores recebem: $600 - $699;\n${quantidadeVendedores[5]} vendedores recebem: $700 - $799;\n${quantidadeVendedores[6]} vendedores recebem: $800 - $899;\n${quantidadeVendedores[7]} vendedores recebem: $900 - $999;\n${quantidadeVendedores[8]} vendedores recebem: $1000 em diante.`);
+    </script>
+
+</head>
+
+<body>
+
+    <h1>16° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

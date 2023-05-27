@@ -1,0 +1,83 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>7° Questão</title>
+        <link rel="stylesheet" href="ResL3.css">
+        
+        <!-- Lista 3 Questão 7
+        Dupla:  Ezequiel Santana e Jônatas Duarte 
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+        <!-- Faça um programa que leia 5 números e informe o maior número.-->
+
+
+        <script>
+            var nome = window.prompt(" Seu nome:");
+            //codigo para interação do user 
+                while(nome == ""){
+                    window.alert(`Você digitou um nome inválido!`);
+                    var nome = window.prompt(" Seu nome:");
+                }
+
+            var numero1 = Number(window.prompt(`Digite um número:`));
+                while(isNaN(numero1)){
+                    window.alert(`Você digitou um valor errado!`);
+                    var numero1 = Number(window.prompt(`Digite um número:`));
+                }
+
+            var numero2 = Number(window.prompt(`Digite um número:`)); 
+                while(isNaN(numero2)){
+                    window.alert(`Você digitou um valor errado!`);
+                    var numero2 = Number(window.prompt(`Digite um número:`)); 
+                }
+
+            var numero3 = Number(window.prompt(`Digite um número:`));
+                while(isNaN(numero3)){
+                    window.alert(`Você digitou um valor errado!`);
+                    var numero3 = Number(window.prompt(`Digite um número:`));
+                }
+
+            var numero4 = Number(window.prompt(`Digite um número:`)); 
+                while(isNaN(numero4)){
+                    window.alert(`Você digitou um valor errado!`);
+                    var numero4 = Number(window.prompt(`Digite um número:`)); 
+                }
+
+            var numero5 = Number(window.prompt(`Digite um número:`));
+                while(isNaN(numero5)){
+                    window.alert(`Você digitou um valor errado!`);
+                    var numero5 = Number(window.prompt(`Digite um número:`));
+                }
+        
+                var numeroMaior = Math.max(numero1,numero2,numero3,numero4,numero5);
+        </script>
+
+    </head>
+   
+    <body>
+                
+        <h1>7° Questão</h1>
+        <br>
+
+        <script> 
+            document.write(`Olá ${nome}! O maior número digitado foi ${numeroMaior}.`)
+        </script>
+
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br> <br>  
+
+
+        <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+        <a href="ResL3.html">
+            <input type="button" class="button" value="Voltar">
+            </a>
+
+    </body>
+        
+</html>

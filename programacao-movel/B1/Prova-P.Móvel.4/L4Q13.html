@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 13
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!-- Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).-->
+
+
+    <script>
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+        var temperaturas = [];
+        var soma = 0;
+        for (var i = 1; i < 13; i++) {
+            var temperatura = Number(window.prompt(`Digite a temperatura em celsius do ${i}° mês do ano:`));
+            while (isNaN(temperatura)) {
+                window.alert(`Você não digitou um valor válido!`)
+                var temperatura = Number(window.prompt(`Digite a temperatura em celsius do ${i}° mês do ano:`));
+            }
+            temperaturas.push(temperatura);
+            soma += temperatura;
+        }
+            var media = soma / 12;
+            var mesesAcima = 0;
+            var vetor = [];
+
+            for (var i = 0; i < 12; i++) {
+                if (temperaturas[i] > media) {
+                    mesesAcima++;
+                    vetor.push(temperaturas[i]);
+                    vetor.push(meses[i]);
+                }
+            }
+
+            if (mesesAcima == 0) {
+                window.alert(`Todos os meses estiveram com a mesma temperatura.`);
+            } else if (mesesAcima == 1) {
+                window.alert(`Só o mês de ${vetor[1]} com a temperatura de ${vetor[0]} esteve com a temperatura acima da média.`);
+            } else {
+                window.alert(`As temperaturas e seu mês respectivo que foram acima da média: ${vetor}.`);
+            }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>13° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>

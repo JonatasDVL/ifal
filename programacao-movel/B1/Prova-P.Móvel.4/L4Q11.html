@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11° Questão</title>
+    <link rel="stylesheet" href="ResL4.css">
+
+    <!-- Lista 4 Questão 11
+        Dupla: Jônatas Duarte e Ezequiel Santana
+        Prof: Italo Rodrigo da Silva Arruda
+        Disciplina: Programação Móvel 
+        Turma: 513
+        -->
+
+    <!--Altere o programa anterior, intercalando 3 vetores de 10 elementos cada.-->
+
+    <script>
+        var vetor1 = [];
+        var vetor2 = [];
+        var vetor3 = [];
+        var vetor4 = [];
+
+        for (var i = 1; i < 11; i++) {
+            var v = Number(window.prompt(`Digite o ${i}° número da 1° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 1° lista:`));
+            }
+            vetor1.push(v);
+        }
+
+        for (var i = 1; i < 11; i++) {
+            var v = Number(window.prompt(`Digite o ${i}° número da 2° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 2° lista:`));
+            }
+            vetor2.push(v);
+        }
+        
+        for (var i = 1; i < 11; i++) {
+            var v = Number(window.prompt(`Digite o ${i}° número da 3° lista:`));
+            while (isNaN(v)) {
+                window.alert(`Você não digitou um número!`)
+                var v = Number(window.prompt(`Digite o ${i}° NÚMERO da 3° lista:`));
+            }
+            vetor3.push(v);
+        }
+
+        for (var i = 0; i < 10; i++) {
+            vetor4.push(vetor1[i])
+            vetor4.push(vetor2[i])
+            vetor4.push(vetor3[i])
+        }
+
+        window.alert(`A 4° lista é formado pela intercalação das três outras listas. Logo o resultado da 4° lista é ${vetor4}`);
+
+    </script>
+
+</head>
+
+<body>
+    <h1>11° Questão</h1>
+
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+
+    <h4>Clique no butão [Voltar] para voltar no menu de respostas.</h4>
+
+    <a href="ResL4.html">
+        <input type="button" class="button" value="Voltar">
+    </a>
+
+</body>
+
+</html>
